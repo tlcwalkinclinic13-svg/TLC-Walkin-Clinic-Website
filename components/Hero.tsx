@@ -23,9 +23,12 @@ export const Hero: React.FC = () => {
         
         {/* Background Image (Static) */}
         <div className="absolute inset-0 w-full h-full">
-          {/* Note: Ensure tlc-staff.jpg is uploaded to the public/ folder */}
+          {/* 
+             NOTE: This expects 'tlc-staff.jpg' to be inside the 'public' folder on GitHub.
+             Vercel serves files in 'public' at the root path '/'.
+          */}
           <img 
-            src="./tlc-staff.jpg" 
+            src="/tlc-staff.jpg" 
             alt="TLC Clinic Staff Friendsgiving Celebration" 
             className="w-full h-full object-cover object-center transition-transform duration-[20s] group-hover:scale-105"
           />
