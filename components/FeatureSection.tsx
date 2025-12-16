@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Truck } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { Button } from './Button';
 import { useLanguage } from '../context/LanguageContext';
 
