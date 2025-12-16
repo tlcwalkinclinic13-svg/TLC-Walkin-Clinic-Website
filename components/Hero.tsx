@@ -7,6 +7,13 @@ export const Hero: React.FC = () => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // IMAGE HANDLING:
+  // 1. Tries to load 'tlc-staff.jpg' from the public folder.
+  // 2. If that fails (file missing or wrong name), falls back to the Unsplash stock photo.
+  const localImage = "tlc-staff.jpg"; // Relative path works better with base: './'
+  const backupImage = "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80";
+  const [imgSrc, setImgSrc] = useState(localImage);
+
   // You can change the closing message in LanguageContext.tsx under 'hero.special.msg'
   const showSpecialNotice = true; // Set to false to hide the special notice slot
 
@@ -23,12 +30,12 @@ export const Hero: React.FC = () => {
         
         {/* Background Image (Static) */}
         <div className="absolute inset-0 w-full h-full">
-          {/* 
-             NOTE: This expects 'tlc-staff.jpg' to be inside the 'public' folder on GitHub.
-             Vercel serves files in 'public' at the root path '/'.
-          */}
           <img 
-            src="/tlc-staff.jpg" 
+            src={imgSrc}
+            onError={() => {
+              // If local image fails to load, automatically switch to backup
+              if (imgSrc !== backupImage) setImgSrc(backupImage);
+            }}
             alt="TLC Clinic Staff Friendsgiving Celebration" 
             className="w-full h-full object-cover object-center transition-transform duration-[20s] group-hover:scale-105"
           />
