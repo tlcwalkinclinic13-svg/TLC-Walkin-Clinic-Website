@@ -1,0 +1,6 @@
+This folder is where you should place your static assets.
+
+Please place your 'tlc-staff.jpg' file here.
+
+Any file in this folder will be served at the root of your website.
+For example: public/tlc-staff.jpg becomes available at your-website.com/tlc-staff.jpg

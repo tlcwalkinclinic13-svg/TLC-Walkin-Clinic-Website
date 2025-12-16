@@ -69,7 +69,7 @@ typings/
 
 # gatsby files
 .cache/
-public
+# public (Removed so you can use the public folder for static assets)
 
 # vuepress build output
 .vuepress/dist
