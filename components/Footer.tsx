@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { HeartPulse, Facebook, Instagram, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -5,6 +6,8 @@ import { useLanguage } from '../context/LanguageContext';
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
   const mapsUrl = "https://www.google.com/maps/dir//7900+NW+23rd+St+%231,+Bethany,+OK+73008";
+  const instagramUrl = "https://www.instagram.com/tlcwalkin.clinic/";
+  const facebookUrl = "https://www.facebook.com/tlcwalkinclinic/";
 
   return (
     <footer id="contact" className="bg-neutral-50 pt-20 pb-10 rounded-t-[3rem] mt-12">
@@ -29,10 +32,23 @@ export const Footer: React.FC = () => {
               {t('footer.desc')}
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all">
+              <a 
+                href={facebookUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all"
+                aria-label="Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all">
+              <a 
+                href={instagramUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all"
+                aria-label="Instagram"
+              >
+                <span className="sr-only">Instagram</span>
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
