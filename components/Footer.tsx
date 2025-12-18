@@ -5,7 +5,6 @@ import { useLanguage } from '../context/LanguageContext';
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
   const mapsUrl = "https://www.google.com/maps/dir//7900+NW+23rd+St+%231,+Bethany,+OK+73008";
-  const instagramUrl = "https://www.instagram.com/tlcwalkin.clinic/";
 
   return (
     <footer id="contact" className="bg-neutral-50 pt-20 pb-10 rounded-t-[3rem] mt-12">
@@ -33,13 +32,7 @@ export const Footer: React.FC = () => {
               <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a 
-                href={instagramUrl} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all"
-                aria-label="Instagram"
-              >
+              <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
