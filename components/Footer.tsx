@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { HeartPulse, Facebook, Instagram, MapPin } from 'lucide-react';
+import { Facebook, Instagram, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -16,16 +17,8 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Col */}
           <div className="space-y-6">
-            {/* Logo Construction */}
-            <div className="flex flex-col items-start inline-block">
-              <div className="flex items-center leading-none">
-                <span className="text-4xl font-serif font-extrabold text-black tracking-tight">TLC</span>
-                <HeartPulse className="h-8 w-8 text-primary ml-1 -mt-1" />
-              </div>
-              <div className="w-full h-[2px] bg-primary my-0.5"></div>
-              <span className="text-[0.65rem] font-heading font-bold text-dark uppercase tracking-[0.15em] leading-none w-full">
-                {t('nav.subtitle')}
-              </span>
+            <div className="h-20 flex items-center">
+              <Logo className="h-full" />
             </div>
 
             <p className="text-neutral-500 text-sm leading-relaxed">

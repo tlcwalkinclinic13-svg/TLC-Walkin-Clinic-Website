@@ -1,3 +1,4 @@
+
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
 type Language = 'en' | 'es';
@@ -158,7 +159,7 @@ const translations = {
     'ins.sooner.desc1': 'ALL patients under ',
     'ins.sooner.desc2': ' Medicaid (Humana, Aetna, Oklahoma Complete Health) MUST have a physical copy on file.',
     'ins.providers': 'Accepted Insurance Providers',
-    'ins.notice': 'This is a proof of eligibility at our clinic',
+    'ins.notice': 'This Is Not A Proof of Eligibility At Our Clinic',
 
     // Telemedicine Page
     'tele.title': 'Telemedicine',
@@ -355,7 +356,7 @@ const translations = {
     'ins.sooner.desc1': 'TODOS los pacientes bajo ',
     'ins.sooner.desc2': ' Medicaid (Humana, Aetna, Oklahoma Complete Health) DEBEN tener una copia física en el archivo.',
     'ins.providers': 'Proveedores de Seguros Aceptados',
-    'ins.notice': 'Esto es una prueba de elegibilidad en nuestra clínica',
+    'ins.notice': 'Esto NO es una prueba de elegibilidad en nuestra clínica',
 
     // Telemedicine Page
     'tele.title': 'Telemedicina',

@@ -1,8 +1,10 @@
+
 import React, { useState } from 'react';
-import { Menu, X, Navigation, HeartPulse, Globe } from 'lucide-react';
+import { Menu, X, Navigation, Globe } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import { Button } from './Button';
 import { useLanguage } from '../context/LanguageContext';
+import { Logo } from './Logo';
 
 export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,27 +27,18 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100">
-      <div className="max-w-[90rem] mx-auto px-6 py-3">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="flex items-start gap-3 group no-underline shrink-0">
-            <div className="flex flex-col items-start">
-              <div className="flex items-center leading-none">
-                <span className="text-4xl font-serif font-extrabold text-black tracking-tight">TLC</span>
-                <HeartPulse className="h-8 w-8 text-primary ml-1 -mt-1" />
-              </div>
-              <div className="w-full h-[2px] bg-primary my-0.5"></div>
-              <span className="text-[0.65rem] font-heading font-bold text-dark uppercase tracking-[0.15em] leading-none w-full text-justify">
-                {t('nav.subtitle')}
-              </span>
-            </div>
+      <div className="max-w-[90rem] mx-auto px-6 py-2">
+        <div className="flex justify-between items-center h-16 md:h-20 lg:h-24">
+          {/* Logo Container */}
+          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center">
+            <Logo className="h-12 md:h-16 lg:h-20" />
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-6">
             {navLinks.map((link) => (
               <NavLink 
-                key={link.to} // Use 'to' as key because label changes with translation
+                key={link.to}
                 to={link.to}
                 end={link.to === '/'} 
                 className={({ isActive }) => 
