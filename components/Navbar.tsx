@@ -26,24 +26,25 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100">
-      <div className="max-w-[90rem] mx-auto px-6 py-2">
-        {/* Increased height classes for the header container */}
-        <div className="flex justify-between items-center h-20 md:h-28 lg:h-32">
-          {/* Logo Container - Increased logo height classes */}
-          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center">
-            <Logo className="h-16 md:h-24 lg:h-28" />
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-sm">
+      <div className="max-w-[95rem] mx-auto px-6 md:px-10">
+        {/* Substantially increased header height for bold branding */}
+        <div className="flex justify-between items-center h-24 md:h-36 lg:h-44 transition-all duration-300">
+          
+          {/* Logo Container - Made much larger and allowed more width */}
+          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-4">
+            <Logo className="h-20 md:h-28 lg:h-36 min-w-[150px] md:min-w-[250px]" />
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-6">
+          {/* Desktop Nav - Better spacing for larger layout */}
+          <nav className="hidden xl:flex items-center gap-8">
             {navLinks.map((link) => (
               <NavLink 
                 key={link.to}
                 to={link.to}
                 end={link.to === '/'} 
                 className={({ isActive }) => 
-                  `text-sm font-semibold transition-colors font-heading ${
+                  `text-sm lg:text-base font-bold transition-colors font-heading tracking-tight ${
                     isActive ? "text-primary" : "text-neutral-700 hover:text-primary"
                   }`
                 }
@@ -55,14 +56,14 @@ export const Navbar: React.FC = () => {
             {/* Language Toggle */}
             <button 
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-sm font-semibold text-neutral-700 hover:text-primary transition-colors px-2 py-1 rounded-md hover:bg-neutral-50"
+              className="flex items-center gap-1.5 text-sm font-bold text-neutral-700 hover:text-primary transition-colors px-3 py-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 border border-neutral-200"
             >
               <Globe className="h-4 w-4" />
-              <span>{language === 'en' ? 'ES' : 'EN'}</span>
+              <span>{language === 'en' ? 'ESP' : 'ENG'}</span>
             </button>
 
-            <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer">
-              {t('nav.directions')} <Navigation className="h-4 w-4" />
+            <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-10 py-4 text-base">
+              {t('nav.directions')} <Navigation className="h-5 w-5 ml-1" />
             </Button>
           </nav>
 
@@ -70,16 +71,16 @@ export const Navbar: React.FC = () => {
           <div className="xl:hidden flex items-center gap-4">
              <button 
                 onClick={toggleLanguage}
-                className="flex items-center gap-1 text-sm font-bold text-neutral-700 border border-neutral-200 px-2 py-1 rounded-md"
+                className="flex items-center gap-1 text-sm font-bold text-neutral-700 border border-neutral-200 px-3 py-1.5 rounded-xl bg-neutral-50"
               >
                 <Globe className="h-4 w-4" />
                 <span>{language === 'en' ? 'ES' : 'EN'}</span>
               </button>
             <button 
-              className="text-dark hover:text-primary transition-colors"
+              className="p-2 text-dark hover:text-primary transition-colors bg-neutral-50 rounded-xl border border-neutral-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
             </button>
           </div>
         </div>
@@ -87,15 +88,15 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="xl:hidden bg-white border-b border-neutral-100 animate-in fade-in slide-in-from-top-2 duration-200">
-          <nav className="flex flex-col p-6 space-y-4">
+        <div className="xl:hidden bg-white border-b border-neutral-100 animate-in fade-in slide-in-from-top-2 duration-300">
+          <nav className="flex flex-col p-8 space-y-6">
             {navLinks.map((link) => (
               <NavLink 
                 key={link.to} 
                 to={link.to}
                 end={link.to === '/'}
                 className={({ isActive }) => 
-                  `text-lg font-semibold py-2 border-b border-neutral-50 ${
+                  `text-2xl font-bold py-3 border-b border-neutral-50 ${
                     isActive ? "text-primary" : "text-dark"
                   }`
                 }
@@ -104,8 +105,8 @@ export const Navbar: React.FC = () => {
                 {link.label}
               </NavLink>
             ))}
-            <div className="pt-2">
-              <Button variant="primary" className="w-full" href={mapsUrl} target="_blank" rel="noopener noreferrer">
+            <div className="pt-4">
+              <Button variant="primary" className="w-full py-5 text-lg" href={mapsUrl} target="_blank" rel="noopener noreferrer">
                 {t('nav.directions')}
               </Button>
             </div>

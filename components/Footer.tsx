@@ -11,92 +11,92 @@ export const Footer: React.FC = () => {
   const facebookUrl = "https://www.facebook.com/tlcwalkinclinic/";
 
   return (
-    <footer id="contact" className="bg-neutral-50 pt-20 pb-10 rounded-t-[3rem] mt-12">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer id="contact" className="bg-neutral-50 pt-24 pb-12 rounded-t-[4rem] mt-12 border-t border-neutral-100">
+      <div className="max-w-[90rem] mx-auto px-6 md:px-12">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           {/* Brand Col */}
-          <div className="space-y-6">
-            {/* Increased container height from h-20 to h-32 */}
-            <div className="h-32 flex items-center">
-              <Logo className="h-full" />
+          <div className="space-y-8">
+            {/* Massive Footer Logo Container */}
+            <div className="h-40 md:h-48 flex items-center justify-start">
+              <Logo className="h-full w-full" />
             </div>
 
-            <p className="text-neutral-500 text-sm leading-relaxed">
+            <p className="text-neutral-500 text-base leading-relaxed max-w-sm">
               {t('footer.desc')}
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               <a 
                 href={facebookUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all"
+                className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-dark hover:text-primary hover:shadow-lg transition-all border border-neutral-100"
                 aria-label="Facebook"
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-6 w-6" />
               </a>
               <a 
                 href={instagramUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark hover:text-primary hover:shadow-md transition-all"
+                className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-dark hover:text-primary hover:shadow-lg transition-all border border-neutral-100"
                 aria-label="Instagram"
               >
                 <span className="sr-only">Instagram</span>
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-6 w-6" />
               </a>
             </div>
           </div>
 
           {/* Visit Us */}
-          <div>
-            <h5 className="font-bold font-heading text-dark mb-6">{t('footer.visit')}</h5>
-            <div className="space-y-4 text-sm text-neutral-500">
-              <p className="flex gap-2 items-start">
-                <MapPin className="h-4 w-4 mt-1 shrink-0" />
-                <span>
+          <div className="lg:pt-10">
+            <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.visit')}</h5>
+            <div className="space-y-6 text-base text-neutral-500">
+              <p className="flex gap-3 items-start">
+                <MapPin className="h-6 w-6 text-primary shrink-0" />
+                <span className="leading-relaxed">
                   7900 NW 23rd St, Suite #1<br />
                   Bethany, OK 73008
                 </span>
               </p>
-              <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-block text-primary font-semibold hover:underline">
+              <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-bold hover:underline bg-primary/5 px-4 py-2 rounded-lg">
                 {t('nav.directions')}
               </a>
             </div>
           </div>
 
           {/* Hours */}
-          <div>
-            <h5 className="font-bold font-heading text-dark mb-6">{t('footer.hours')}</h5>
-            <ul className="space-y-3 text-sm text-neutral-500">
-              <li className="flex justify-between max-w-[200px]">
+          <div className="lg:pt-10">
+            <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.hours')}</h5>
+            <ul className="space-y-4 text-base text-neutral-600">
+              <li className="flex justify-between border-b border-neutral-100 pb-2">
                 <span>{t('footer.monfri')}:</span>
-                <span className="font-medium text-dark">8:00 AM – 5:30 PM</span>
+                <span className="font-bold text-dark">8:00 AM – 5:30 PM</span>
               </li>
-              <li className="flex justify-between max-w-[200px]">
+              <li className="flex justify-between border-b border-neutral-100 pb-2">
                 <span>{t('footer.sat')}:</span>
-                <span className="text-primary font-medium">{t('footer.closed')}</span>
+                <span className="text-primary font-bold uppercase text-sm tracking-wider">{t('footer.closed')}</span>
               </li>
-              <li className="flex justify-between max-w-[200px]">
+              <li className="flex justify-between border-b border-neutral-100 pb-2">
                 <span>{t('footer.sun')}:</span>
-                <span className="text-primary font-medium">{t('footer.closed')}</span>
+                <span className="text-primary font-bold uppercase text-sm tracking-wider">{t('footer.closed')}</span>
               </li>
             </ul>
           </div>
 
           {/* Resources */}
-          <div>
-             <h5 className="font-bold font-heading text-dark mb-6">{t('footer.resources')}</h5>
-             <ul className="space-y-3 text-sm">
-               <li><a href="#" className="text-neutral-500 hover:text-primary transition-colors">{t('footer.forms')}</a></li>
-               <li><a href="#" className="text-neutral-500 hover:text-primary transition-colors">{t('footer.privacy')}</a></li>
-               <li><span className="text-neutral-400 cursor-not-allowed">{t('footer.portal')}</span></li>
+          <div className="lg:pt-10">
+             <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.resources')}</h5>
+             <ul className="space-y-4 text-base">
+               <li><a href="#" className="text-neutral-500 hover:text-primary font-medium transition-colors">{t('footer.forms')}</a></li>
+               <li><a href="#" className="text-neutral-500 hover:text-primary font-medium transition-colors">{t('footer.privacy')}</a></li>
+               <li><span className="text-neutral-300 cursor-not-allowed italic">{t('footer.portal')}</span></li>
              </ul>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-neutral-200 pt-8 text-center text-xs text-neutral-400">
+        <div className="border-t border-neutral-200 pt-10 text-center text-sm text-neutral-400 font-medium">
           &copy; {new Date().getFullYear()} TLC Walk-In Clinic. {t('footer.rights')}
         </div>
       </div>
