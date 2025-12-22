@@ -27,11 +27,11 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-sm">
-      <div className="max-w-[95rem] mx-auto px-6 md:px-10">
-        {/* Navbar container height reduced by 20% */}
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Container matches the max-width of the sections below (max-w-7xl) */}
         <div className="flex justify-between items-center h-24 md:h-36 lg:h-40 transition-all duration-300">
           
-          {/* Logo Container - height reduced by 20% */}
+          {/* Logo Container - Aligns with the content blocks below */}
           <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-3">
             <Logo className="h-16 md:h-28 lg:h-32 min-w-[150px] md:min-w-[240px]" />
           </Link>

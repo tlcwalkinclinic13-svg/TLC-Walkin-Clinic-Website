@@ -12,12 +12,12 @@ export const Footer: React.FC = () => {
 
   return (
     <footer id="contact" className="bg-neutral-50 pt-20 pb-12 rounded-t-[3rem] mt-12 border-t border-neutral-100">
-      <div className="max-w-[90rem] mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Col */}
           <div className="space-y-8">
-            {/* Footer Logo Container reduced by 20% (h-40 md:h-48) */}
+            {/* Footer Logo Container aligns with the header logo */}
             <div className="h-40 md:h-48 flex items-center justify-start">
               <Logo className="h-full w-full" />
             </div>
