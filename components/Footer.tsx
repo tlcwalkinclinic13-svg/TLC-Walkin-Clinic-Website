@@ -17,8 +17,8 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Col */}
           <div className="space-y-8">
-            {/* Footer Logo Container sized to ~1.25x (h-52 md:h-60) */}
-            <div className="h-52 md:h-60 flex items-center justify-start">
+            {/* Footer Logo Container reduced by 20% (h-40 md:h-48) */}
+            <div className="h-40 md:h-48 flex items-center justify-start">
               <Logo className="h-full w-full" />
             </div>
 

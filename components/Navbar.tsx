@@ -28,12 +28,12 @@ export const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-sm">
       <div className="max-w-[95rem] mx-auto px-6 md:px-10">
-        {/* Adjusted header height to 1.25x of the proportional version (h-32/44/52) */}
-        <div className="flex justify-between items-center h-28 md:h-44 lg:h-52 transition-all duration-300">
+        {/* Navbar container height reduced by 20% */}
+        <div className="flex justify-between items-center h-24 md:h-36 lg:h-40 transition-all duration-300">
           
-          {/* Logo Container - Sized to roughly 1.25x of the previous refined layout */}
-          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-4">
-            <Logo className="h-20 md:h-36 lg:h-44 min-w-[180px] md:min-w-[300px]" />
+          {/* Logo Container - height reduced by 20% */}
+          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-3">
+            <Logo className="h-16 md:h-28 lg:h-32 min-w-[150px] md:min-w-[240px]" />
           </Link>
 
           {/* Desktop Nav */}
@@ -62,8 +62,8 @@ export const Navbar: React.FC = () => {
               <span>{language === 'en' ? 'ESP' : 'ENG'}</span>
             </button>
 
-            <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 text-base">
-              {t('nav.directions')} <Navigation className="h-5 w-5 ml-1" />
+            <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 text-sm">
+              {t('nav.directions')} <Navigation className="h-4 w-4 ml-1" />
             </Button>
           </nav>
 
@@ -80,7 +80,7 @@ export const Navbar: React.FC = () => {
               className="p-2 text-dark hover:text-primary transition-colors bg-neutral-50 rounded-xl border border-neutral-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
