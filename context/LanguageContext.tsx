@@ -62,6 +62,8 @@ const translations = {
     'dot.title': 'Certified DOT Physical Exams',
     'dot.desc': 'We offer certified DOT Physical Exams for commercial drivers, ensuring you stay on the road legally and healthily. Fast turnaround and certified examiners.',
     'dot.btn': 'Contact to Schedule',
+    'dot.form1': 'MCSA-5875 (Examination Report)',
+    'dot.form2': 'MCSA-5876 (Medical Certificate)',
 
     // About Page
     'about.title': 'About Us',
@@ -106,7 +108,7 @@ const translations = {
 
     'svc.minor.title': 'Minor Procedures',
     'svc.minor.desc': 'We perform minor procedures including laceration repairs, toenail removals, and Incision & Drainage.',
-    'svc.minor.1': 'Splinters', 'svc.minor.2': 'Lacerations', 'svc.minor.3': 'Abscess I&D', 'svc.minor.4': 'Minor Burns',
+    'svc.minor.1': 'Foreign Body Removal', 'svc.minor.2': 'Lacerations', 'svc.minor.3': 'Abscess I&D', 'svc.minor.4': 'Minor Burns',
 
     'svc.blood.title': 'Bloodwork',
     'svc.blood.desc': 'Partnered with DLO to draw certain labs depending on the work-up indicated.',
@@ -115,6 +117,7 @@ const translations = {
     'svc.sports.title': 'Sports Physicals',
     'svc.sports.desc': 'We offer affordable sports physicals for K-12 and college students.',
     'svc.sports.1': '$20 Gradeschool Physical', 'svc.sports.2': '$30 College Physical',
+    'svc.sports.form': 'Download OSSAA Physical Form (PDF)',
 
     'svc.misc.title': 'Miscellaneous',
     'svc.misc.desc': 'Various other services to meet your immediate healthcare needs.',
@@ -129,7 +132,7 @@ const translations = {
     
     // Price Items
     'price.office': 'Office Visit',
-    'price.office.val': '$60 + additional services',
+    'price.office.val': '$60 + additional services if needed',
     'price.sports': 'Gradeschool Sports Physical',
     'price.sports_college': 'College Sports Physical',
     'price.dot': 'DOT Physical Exam',
@@ -259,6 +262,8 @@ const translations = {
     'dot.title': 'Exámenes Físicos DOT Certificados',
     'dot.desc': 'Ofrecemos exámenes físicos DOT certificados para conductores comerciales, asegurando que permanezca en la carretera legal y saludablemente.',
     'dot.btn': 'Contactar para Programar',
+    'dot.form1': 'MCSA-5875 (Informe de Examen)',
+    'dot.form2': 'MCSA-5876 (Certificado Médico)',
 
      // About Page
     'about.title': 'Sobre Nosotros',
@@ -285,7 +290,7 @@ const translations = {
     'svc.imaging.desc': 'Nos especializamos en brindar atención excepcional para fracturas, utilizando tecnología XR de última generación para garantizar un diagnóstico preciso.',
     'svc.imaging.1': 'Esguinces Musculares', 'svc.imaging.2': 'Dislocaciones', 'svc.imaging.3': 'Fracturas',
     
-    'svc.resp.title': 'Síntomas Respiratorios',
+    'svc.resp.title': 'Síúntomas Respiratorios',
     'svc.resp.desc': 'Pruebas en el punto de atención para Covid-19, Estreptococo, Influenza A y B, VSR. Estamos equipados con tratamientos respiratorios para el asma.',
     'svc.resp.1': 'Tos/Congestión', 'svc.resp.2': 'Neumonía', 'svc.resp.3': 'Dolor de garganta', 'svc.resp.4': 'Infecciones de oído', 'svc.resp.5': 'Infección Sinusal',
 
@@ -303,7 +308,7 @@ const translations = {
 
     'svc.minor.title': 'Procedimientos Menores',
     'svc.minor.desc': 'Realizamos procedimientos menores que incluyen reparaciones de laceraciones, extracción de uñas y drenaje de abscesos.',
-    'svc.minor.1': 'Astillas', 'svc.minor.2': 'Laceraciones', 'svc.minor.3': 'Drenaje de Abscesos', 'svc.minor.4': 'Quemaduras Leves',
+    'svc.minor.1': 'Extracción de cuerpos extraños', 'svc.minor.2': 'Laceraciones', 'svc.minor.3': 'Drenaje de Abscesos', 'svc.minor.4': 'Quemaduras Leves',
 
     'svc.blood.title': 'Análisis de Sangre',
     'svc.blood.desc': 'Asociados con DLO para extraer ciertos laboratorios dependiendo del análisis indicado.',
@@ -312,6 +317,7 @@ const translations = {
     'svc.sports.title': 'Físicos Deportivos',
     'svc.sports.desc': 'Ofrecemos exámenes físicos deportivos asequibles para estudiantes de K-12 y universitarios.',
     'svc.sports.1': '$20 Físico Escolar', 'svc.sports.2': '$30 Físico Universitario',
+    'svc.sports.form': 'Descargar Formulario Físico de OSSAA (PDF)',
 
     'svc.misc.title': 'Misceláneos',
     'svc.misc.desc': 'Varios otros servicios para satisfacer sus necesidades de atención médica inmediata.',
@@ -326,7 +332,7 @@ const translations = {
     
     // Price Items
     'price.office': 'Visita al Consultorio',
-    'price.office.val': '$60 + servicios adicionales',
+    'price.office.val': '$60 + servicios adicionales si es necesario',
     'price.sports': 'Examen Físico Escolar',
     'price.sports_college': 'Examen Físico Universitario',
     'price.dot': 'Examen Físico DOT',

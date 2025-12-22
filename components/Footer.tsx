@@ -16,15 +16,16 @@ export const Footer: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Col */}
-          <div className="space-y-8">
-            {/* Footer Logo Container now aligns with the header and hero block edges */}
-            <div className="h-40 md:h-48 flex items-center justify-start">
+          <div className="flex flex-col">
+            {/* Footer Logo Container - Adjusted for better proportion on top of text */}
+            <div className="h-20 md:h-24 lg:h-28 flex items-center justify-start mb-6">
               <Logo className="h-full w-full" />
             </div>
 
-            <p className="text-neutral-500 text-base leading-relaxed max-w-sm">
+            <p className="text-neutral-500 text-base leading-relaxed max-w-sm mb-8">
               {t('footer.desc')}
             </p>
+            
             <div className="flex gap-4">
               <a 
                 href={facebookUrl} 

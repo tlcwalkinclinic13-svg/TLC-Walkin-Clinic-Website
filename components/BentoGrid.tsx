@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ArrowRight, Bone, Wind, Syringe, Stethoscope, Scale, Scissors, TestTube, Trophy, ClipboardPlus } from 'lucide-react';
+import { ArrowRight, Bone, Wind, Syringe, Stethoscope, Scale, Scissors, TestTube, Trophy, ClipboardPlus, FileText, Truck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -38,6 +39,16 @@ export const BentoGrid: React.FC = () => {
       icon: Scale,
     },
     {
+      title: t('dot.title'),
+      description: t('dot.desc'),
+      bullets: [],
+      icon: Truck,
+      pdfLinks: [
+        { url: 'MCSA-5875-DOT-Form.pdf', text: t('dot.form1') },
+        { url: 'MCSA-5876-DOT-Certificate.pdf', text: t('dot.form2') }
+      ],
+    },
+    {
       title: t('svc.minor.title'),
       description: t('svc.minor.desc'),
       bullets: [t('svc.minor.1'), t('svc.minor.2'), t('svc.minor.3'), t('svc.minor.4')],
@@ -54,6 +65,7 @@ export const BentoGrid: React.FC = () => {
       description: t('svc.sports.desc'),
       bullets: [t('svc.sports.1'), t('svc.sports.2')],
       icon: Trophy,
+      pdfLinks: [{ url: 'OSSAA-Physical-Form.pdf', text: t('svc.sports.form') }],
     },
     {
       title: t('svc.misc.title'),
@@ -96,16 +108,38 @@ export const BentoGrid: React.FC = () => {
                 {service.description}
               </p>
               
-              {service.bullets.length > 0 && (
-                <div className="pt-4 border-t border-neutral-200">
-                  <ul className="space-y-2">
-                    {service.bullets.map((bullet, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-neutral-600 font-medium">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
+              {((service.bullets && service.bullets.length > 0) || (service.pdfLinks && service.pdfLinks.length > 0)) && (
+                <div className="pt-4 border-t border-neutral-200 mt-auto">
+                  {service.bullets && service.bullets.length > 0 && (
+                    <ul className="space-y-2 mb-4">
+                      {service.bullets.map((bullet, i) => (
+                        <li key={i} className="flex items-center gap-2 text-sm text-neutral-600 font-medium">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {service.pdfLinks && service.pdfLinks.length > 0 && (
+                    <div className="mt-4 pt-4 border-t border-neutral-100 space-y-3">
+                      {service.pdfLinks.map((link, i) => (
+                        <a 
+                          key={i}
+                          href={link.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between gap-2 text-sm font-bold text-primary hover:text-white hover:bg-primary transition-all p-3 rounded-xl bg-primary/5 group/link border border-primary/10 shadow-sm"
+                        >
+                          <span className="flex items-center gap-2">
+                            <FileText className="h-4 w-4 transition-transform group-hover/link:scale-110" />
+                            {link.text}
+                          </span>
+                          <ArrowRight className="h-3 w-3 opacity-0 group-hover/link:opacity-100 transition-all translate-x-[-10px] group-hover/link:translate-x-0" />
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
             </div>

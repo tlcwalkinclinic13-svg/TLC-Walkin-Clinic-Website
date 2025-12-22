@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Phone } from 'lucide-react';
+import { Phone, FileText } from 'lucide-react';
 import { Button } from './Button';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -52,7 +53,7 @@ export const DOTSection: React.FC = () => {
   return (
     <section className="py-6 px-4 md:px-6">
       {/* Dark Background for contrast */}
-      <div className="max-w-7xl mx-auto bg-dark rounded-3xl text-white p-8 md:p-16 overflow-hidden relative shadow-xl">
+      <div className="max-w-7xl mx-auto bg-dark rounded-3xl text-white p-8 md:p-16 overflow-hidden relative shadow-xl border border-neutral-800">
         
         {/* Abstract Decoration Circle */}
         <div className="absolute -bottom-1/2 -left-1/4 w-[600px] h-[600px] border border-white/5 rounded-full opacity-50 hidden lg:block pointer-events-none" />
@@ -60,7 +61,7 @@ export const DOTSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 lg:grid-flow-col-dense">
           
           {/* Image Left for variation */}
-          <div className="relative h-[400px] rounded-3xl overflow-hidden bg-neutral-800 lg:order-1 order-2 shadow-inner border border-white/5">
+          <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden bg-neutral-800 lg:order-1 order-2 shadow-inner border border-white/5">
             <img 
               src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
               alt="Truck Driver DOT Exam" 
@@ -79,10 +80,36 @@ export const DOTSection: React.FC = () => {
             <p className="text-neutral-400 text-lg leading-relaxed">
               {t('dot.desc')}
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button variant="white" href="tel:4054703232">
-                <Phone className="h-4 w-4" /> {t('dot.btn')}
-              </Button>
+            
+            {/* Action Buttons and Links */}
+            <div className="space-y-6">
+              <div className="flex flex-wrap gap-4">
+                <Button variant="primary" href="tel:4054703232">
+                  <Phone className="h-4 w-4" /> {t('dot.btn')}
+                </Button>
+              </div>
+
+              {/* Form Links for DOT */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-6 border-t border-white/10">
+                <a 
+                  href="MCSA-5875-DOT-Form.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                >
+                  <FileText className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                  <span className="text-sm font-semibold">{t('dot.form1')}</span>
+                </a>
+                <a 
+                  href="MCSA-5876-DOT-Certificate.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                >
+                  <FileText className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                  <span className="text-sm font-semibold">{t('dot.form2')}</span>
+                </a>
+              </div>
             </div>
           </div>
 
