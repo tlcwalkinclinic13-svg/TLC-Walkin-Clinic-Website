@@ -17,7 +17,8 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Col */}
           <div className="space-y-6">
-            <div className="h-20 flex items-center">
+            {/* Increased container height from h-20 to h-32 */}
+            <div className="h-32 flex items-center">
               <Logo className="h-full" />
             </div>
 

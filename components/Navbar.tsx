@@ -28,10 +28,11 @@ export const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100">
       <div className="max-w-[90rem] mx-auto px-6 py-2">
-        <div className="flex justify-between items-center h-16 md:h-20 lg:h-24">
-          {/* Logo Container */}
+        {/* Increased height classes for the header container */}
+        <div className="flex justify-between items-center h-20 md:h-28 lg:h-32">
+          {/* Logo Container - Increased logo height classes */}
           <Link to="/" className="group no-underline shrink-0 block h-full flex items-center">
-            <Logo className="h-12 md:h-16 lg:h-20" />
+            <Logo className="h-16 md:h-24 lg:h-28" />
           </Link>
 
           {/* Desktop Nav */}
