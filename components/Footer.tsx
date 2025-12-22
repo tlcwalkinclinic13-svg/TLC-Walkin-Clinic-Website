@@ -11,13 +11,13 @@ export const Footer: React.FC = () => {
   const facebookUrl = "https://www.facebook.com/tlcwalkinclinic/";
 
   return (
-    <footer id="contact" className="bg-neutral-50 pt-20 pb-12 rounded-t-[3rem] mt-12 border-t border-neutral-100">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer id="contact" className="bg-neutral-50 pt-20 pb-12 rounded-t-[3rem] mt-12 border-t border-neutral-100 px-4 md:px-6">
+      <div className="max-w-7xl mx-auto">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Col */}
           <div className="space-y-8">
-            {/* Footer Logo Container aligns with the header logo */}
+            {/* Footer Logo Container now aligns with the header and hero block edges */}
             <div className="h-40 md:h-48 flex items-center justify-start">
               <Logo className="h-full w-full" />
             </div>
