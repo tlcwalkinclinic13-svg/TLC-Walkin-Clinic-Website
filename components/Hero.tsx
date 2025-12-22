@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, Phone, Printer, Mail, Clock, AlertCircle } from 'lucide-react';
 import { Button } from './Button';
@@ -81,21 +82,21 @@ export const Hero: React.FC = () => {
                     <li className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-neutral-300 shrink-0" />
                       <div>
-                        <span className="block text-xs text-neutral-400">{t('hero.info.phone')}</span>
+                        <span className="block text-xs text-primary font-bold uppercase tracking-wider">{t('hero.info.phone')}</span>
                         <a href="tel:4054703232" className="hover:text-primary-light transition-colors font-medium">(405) 470-3232</a>
                       </div>
                     </li>
                     <li className="flex items-center gap-3">
                       <Printer className="h-5 w-5 text-neutral-300 shrink-0" />
                       <div>
-                         <span className="block text-xs text-neutral-400">{t('hero.info.fax')}</span>
+                         <span className="block text-xs text-primary font-bold uppercase tracking-wider">{t('hero.info.fax')}</span>
                          <span className="font-medium">(405) 470-3233</span>
                       </div>
                     </li>
                     <li className="flex items-center gap-3">
                       <Mail className="h-5 w-5 text-neutral-300 shrink-0" />
                       <div>
-                         <span className="block text-xs text-neutral-400">{t('hero.info.email')}</span>
+                         <span className="block text-xs text-primary font-bold uppercase tracking-wider">{t('hero.info.email')}</span>
                          <a href="mailto:tlcwalkinclinic13@gmail.com" className="hover:text-primary-light transition-colors font-medium break-all">tlcwalkinclinic13@gmail.com</a>
                       </div>
                     </li>
@@ -111,11 +112,11 @@ export const Hero: React.FC = () => {
                         <span className="font-bold">{t('hero.hours.time')}</span>
                       </li>
                       <li className="flex justify-between items-center text-neutral-400">
-                        <span>{t('footer.sat')}</span>
+                        <span className="text-primary font-bold uppercase text-xs tracking-widest">{t('footer.sat')}</span>
                         <span>{t('footer.closed')}</span>
                       </li>
                       <li className="flex justify-between items-center text-neutral-400">
-                        <span>{t('footer.sun')}</span>
+                        <span className="text-primary font-bold uppercase text-xs tracking-widest">{t('footer.sun')}</span>
                         <span>{t('footer.closed')}</span>
                       </li>
                    </ul>
