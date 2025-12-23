@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
     <footer id="contact" className="bg-neutral-50 pt-20 pb-12 rounded-t-[3rem] mt-12 border-t border-neutral-100 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand Col */}
           <div className="flex flex-col">
             {/* Footer Logo Container - Adjusted for better proportion on top of text */}
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Visit Us */}
-          <div className="lg:pt-10">
+          <div className="md:pt-10">
             <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.visit')}</h5>
             <div className="space-y-6 text-base text-neutral-500">
               <p className="flex gap-3 items-start">
@@ -67,7 +67,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Hours */}
-          <div className="lg:pt-10">
+          <div className="md:pt-10">
             <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.hours')}</h5>
             <ul className="space-y-4 text-base text-neutral-600">
               <li className="flex justify-between border-b border-neutral-100 pb-2">
@@ -83,16 +83,6 @@ export const Footer: React.FC = () => {
                 <span className="text-primary font-bold uppercase text-sm tracking-wider">{t('footer.closed')}</span>
               </li>
             </ul>
-          </div>
-
-          {/* Resources */}
-          <div className="lg:pt-10">
-             <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.resources')}</h5>
-             <ul className="space-y-4 text-base">
-               <li><a href="#" className="text-neutral-500 hover:text-primary font-medium transition-colors">{t('footer.forms')}</a></li>
-               <li><a href="#" className="text-neutral-500 hover:text-primary font-medium transition-colors">{t('footer.privacy')}</a></li>
-               <li><span className="text-neutral-300 cursor-not-allowed italic">{t('footer.portal')}</span></li>
-             </ul>
           </div>
         </div>
 
