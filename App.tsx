@@ -12,6 +12,7 @@ import { PricingPage } from './pages/PricingPage';
 import { AboutPage } from './pages/AboutPage';
 import { InsurancePage } from './pages/InsurancePage';
 import { TelemedicinePage } from './pages/TelemedicinePage';
+import { SpecialOffersPage } from './pages/SpecialOffersPage';
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -38,6 +39,7 @@ const App: React.FC = () => {
               <Route path="/insurance" element={<InsurancePage />} />
               <Route path="/telemedicine" element={<TelemedicinePage />} />
               <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/offers" element={<SpecialOffersPage />} />
             </Routes>
           </main>
           <Footer />

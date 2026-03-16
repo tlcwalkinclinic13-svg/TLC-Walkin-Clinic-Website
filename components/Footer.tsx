@@ -60,16 +60,21 @@ export const Footer: React.FC = () => {
                   Bethany, OK 73008
                 </span>
               </p>
-              <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-bold hover:underline bg-primary/5 px-4 py-2 rounded-lg">
-                {t('nav.directions')}
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a href="tel:4054703232" className="inline-flex items-center gap-2 text-primary font-bold hover:underline bg-primary/5 px-4 py-2 rounded-lg">
+                  {t('nav.contact')}
+                </a>
+                <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-bold hover:underline bg-primary/5 px-4 py-2 rounded-lg">
+                  {t('nav.directions')}
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Hours */}
           <div className="md:pt-10">
             <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.hours')}</h5>
-            <ul className="space-y-4 text-base text-neutral-600">
+            <ul className="space-y-4 text-base text-neutral-600 mb-8">
               <li className="flex justify-between border-b border-neutral-100 pb-2">
                 <span>{t('footer.monfri')}:</span>
                 <span className="font-bold text-dark">8:00 AM – 5:30 PM</span>
@@ -83,6 +88,16 @@ export const Footer: React.FC = () => {
                 <span className="text-primary font-bold uppercase text-sm tracking-wider">{t('footer.closed')}</span>
               </li>
             </ul>
+
+            <h5 className="font-bold font-heading text-dark text-lg mb-6">{t('footer.resources')}</h5>
+            <a 
+              href="/special-offer.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary font-bold hover:underline"
+            >
+              {t('offers.deal1.btn')}
+            </a>
           </div>
         </div>
 

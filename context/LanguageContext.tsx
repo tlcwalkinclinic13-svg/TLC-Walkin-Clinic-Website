@@ -16,13 +16,29 @@ const translations = {
     
     // Navbar
     'nav.home': 'Home',
-    'nav.about': 'About Us',
+    'nav.about': 'Special Offer',
     'nav.services': 'Services',
     'nav.telemedicine': 'Telemedicine',
     'nav.insurance': 'Insurance',
     'nav.pricing': 'Pricing',
     'nav.directions': 'Get Directions',
+    'nav.contact': 'Contact Us',
     'nav.subtitle': 'Walk-In Clinic',
+    'nav.special': 'Special Offer',
+
+    // About Us Section (Home)
+    'about.label.home': 'Learn More',
+    'about.title.home': 'About Our Clinic',
+    'about.desc.home': 'TLC Walk-in Clinic is committed to providing high-quality medical care to the Bethany community. We focus on patient-centered care and building lasting relationships.',
+    'about.btn.home': 'Read Our Story',
+
+    // Special Offers Page
+    'offers.title': 'Special Offers',
+    'offers.subtitle': 'Current deals and exclusive discounts for our patients.',
+    'offers.empty': 'Check back soon for new special offers and seasonal deals!',
+    'offers.deal1.title': 'New Patient Special',
+    'offers.deal1.desc': 'Bring this form or show a copy of this form for $10 off your first visit.',
+    'offers.deal1.btn': 'View Special Offer Form (PDF)',
 
     // Hero - Slide 1 (Original)
     'hero.open': 'Open Today until 5:30 PM',
@@ -216,13 +232,29 @@ const translations = {
 
     // Navbar
     'nav.home': 'Inicio',
-    'nav.about': 'Nosotros',
+    'nav.about': 'Oferta Especial',
     'nav.services': 'Servicios',
     'nav.telemedicine': 'Telemedicina',
     'nav.insurance': 'Seguros',
     'nav.pricing': 'Precios',
     'nav.directions': 'Cómo Llegar',
+    'nav.contact': 'Contáctenos',
     'nav.subtitle': 'Clínica Sin Cita',
+    'nav.special': 'Oferta Especial',
+
+    // About Us Section (Home)
+    'about.label.home': 'Saber Más',
+    'about.title.home': 'Sobre Nuestra Clínica',
+    'about.desc.home': 'TLC Walk-in Clinic se compromete a brindar atención médica de alta calidad a la comunidad de Bethany. Nos enfocamos en la atención centrada en el paciente.',
+    'about.btn.home': 'Leer Nuestra Historia',
+
+    // Special Offers Page
+    'offers.title': 'Ofertas Especiales',
+    'offers.subtitle': 'Ofertas actuales y descuentos exclusivos para nuestros pacientes.',
+    'offers.empty': '¡Vuelva pronto para ver nuevas ofertas especiales y ofertas de temporada!',
+    'offers.deal1.title': 'Especial para Pacientes Nuevos',
+    'offers.deal1.desc': 'Traiga este formulario o muestre una copia de este formulario para obtener $10 de descuento en su primera visita.',
+    'offers.deal1.btn': 'Ver Formulario de Oferta Especial (PDF)',
 
     // Hero - Slide 1 (Original)
     'hero.open': 'Abierto hoy hasta las 5:30 PM',

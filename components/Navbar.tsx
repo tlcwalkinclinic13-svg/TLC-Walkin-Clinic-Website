@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X, Navigation, Globe } from 'lucide-react';
+import { Menu, X, Navigation, Globe, Phone } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
 import { Button } from './Button';
 import { useLanguage } from '../context/LanguageContext';
@@ -12,11 +12,11 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: t('nav.home'), to: '/' },
-    { label: t('nav.about'), to: '/about' },
     { label: t('nav.services'), to: '/services' },
     { label: t('nav.telemedicine'), to: '/telemedicine' },
     { label: t('nav.insurance'), to: '/insurance' },
     { label: t('nav.pricing'), to: '/pricing' },
+    { label: t('nav.special'), to: '/offers' },
   ];
 
   const mapsUrl = "https://www.google.com/maps/dir//7900+NW+23rd+St+%231,+Bethany,+OK+73008";
@@ -37,14 +37,14 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-3 lg:gap-4">
             {navLinks.map((link) => (
               <NavLink 
                 key={link.to}
                 to={link.to}
                 end={link.to === '/'} 
                 className={({ isActive }) => 
-                  `text-sm lg:text-base font-bold transition-colors font-heading tracking-tight ${
+                  `text-xs lg:text-sm font-bold transition-colors font-heading tracking-tight whitespace-nowrap ${
                     isActive ? "text-primary" : "text-neutral-700 hover:text-primary"
                   }`
                 }
@@ -56,15 +56,20 @@ export const Navbar: React.FC = () => {
             {/* Language Toggle */}
             <button 
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 text-sm font-bold text-neutral-700 hover:text-primary transition-colors px-3 py-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 border border-neutral-200"
+              className="flex items-center gap-1 text-xs font-bold text-neutral-700 hover:text-primary transition-colors px-2 py-1.5 rounded-lg bg-neutral-50 hover:bg-neutral-100 border border-neutral-200"
             >
-              <Globe className="h-4 w-4" />
+              <Globe className="h-3.5 w-3.5" />
               <span>{language === 'en' ? 'ESP' : 'ENG'}</span>
             </button>
 
-            <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 text-sm">
-              {t('nav.directions')} <Navigation className="h-4 w-4 ml-1" />
-            </Button>
+            <div className="flex items-center gap-1.5">
+              <Button variant="primary" href="tel:4054703232" className="px-2.5 py-1.5 text-[10px] lg:text-[11px] whitespace-nowrap">
+                {t('nav.contact')} <Phone className="h-3 w-3 ml-1" />
+              </Button>
+              <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-2.5 py-1.5 text-[10px] lg:text-[11px] whitespace-nowrap">
+                {t('nav.directions')} <Navigation className="h-3 w-3 ml-1" />
+              </Button>
+            </div>
           </nav>
 
           {/* Mobile Toggle */}
@@ -105,9 +110,12 @@ export const Navbar: React.FC = () => {
                 {link.label}
               </NavLink>
             ))}
-            <div className="pt-4">
+            <div className="pt-4 space-y-4">
+              <Button variant="primary" className="w-full py-4 text-lg" href="tel:4054703232">
+                {t('nav.contact')} <Phone className="h-5 w-5 ml-2" />
+              </Button>
               <Button variant="primary" className="w-full py-4 text-lg" href={mapsUrl} target="_blank" rel="noopener noreferrer">
-                {t('nav.directions')}
+                {t('nav.directions')} <Navigation className="h-5 w-5 ml-2" />
               </Button>
             </div>
           </nav>

@@ -44,8 +44,8 @@ export const BentoGrid: React.FC = () => {
       bullets: [],
       icon: Truck,
       pdfLinks: [
-        { url: 'MCSA-5875-DOT-Form.pdf', text: t('dot.form1') },
-        { url: 'MCSA-5876-DOT-Certificate.pdf', text: t('dot.form2') }
+        { url: '/MCSA-5875-DOT-Form.pdf', text: t('dot.form1') },
+        { url: '/MCSA-5876-DOT-Certificate.pdf', text: t('dot.form2') }
       ],
     },
     {
@@ -65,7 +65,7 @@ export const BentoGrid: React.FC = () => {
       description: t('svc.sports.desc'),
       bullets: [t('svc.sports.1'), t('svc.sports.2')],
       icon: Trophy,
-      pdfLinks: [{ url: 'OSSAA-Physical-Form.pdf', text: t('svc.sports.form') }],
+      pdfLinks: [{ url: '/OSSAA-Physical-Form.pdf', text: t('svc.sports.form') }],
     },
     {
       title: t('svc.misc.title'),

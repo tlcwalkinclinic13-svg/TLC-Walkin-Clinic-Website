@@ -118,3 +118,40 @@ export const DOTSection: React.FC = () => {
     </section>
   );
 };
+
+export const AboutUsSection: React.FC = () => {
+  const { t } = useLanguage();
+  
+  return (
+    <section className="py-6 px-4 md:px-6">
+      <div className="max-w-7xl mx-auto bg-neutral-50 rounded-3xl p-8 md:p-16 overflow-hidden relative border border-neutral-200 shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="space-y-8">
+            <div className="inline-block text-primary font-bold text-sm tracking-widest mb-2 uppercase bg-primary/10 px-3 py-1 rounded-full">
+              {t('about.label.home')}
+            </div>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight text-dark">
+              {t('about.title.home')}
+            </h2>
+            <p className="text-neutral-600 text-lg leading-relaxed">
+              {t('about.desc.home')}
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button variant="primary" href="/#/about">
+                {t('about.btn.home')}
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-md">
+            <img 
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+              alt="Clinic Interior" 
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
