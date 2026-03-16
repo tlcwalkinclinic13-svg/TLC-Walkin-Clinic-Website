@@ -16,7 +16,7 @@ export const Navbar: React.FC = () => {
     { label: t('nav.telemedicine'), to: '/telemedicine' },
     { label: t('nav.insurance'), to: '/insurance' },
     { label: t('nav.pricing'), to: '/pricing' },
-    { label: t('nav.special'), to: '/offers' },
+    { label: t('nav.about'), to: '/offers' },
   ];
 
   const mapsUrl = "https://www.google.com/maps/dir//7900+NW+23rd+St+%231,+Bethany,+OK+73008";
@@ -28,16 +28,15 @@ export const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-sm px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Horizontal padding removed here so Logo can sit at the absolute edge of the 7xl grid */}
-        <div className="flex justify-between items-center h-36 md:h-64 lg:h-72 transition-all duration-300">
+        <div className="flex justify-between items-center h-32 md:h-40 lg:h-44 transition-all duration-300">
           
-          {/* Logo Container - Now extremely prominent */}
-          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-1">
-            <Logo className="h-32 md:h-60 lg:h-68 min-w-[220px] md:min-w-[400px]" />
+          {/* Logo Container - Keeping the large size from the picture */}
+          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-2">
+            <Logo className="h-28 md:h-36 lg:h-40 min-w-[200px] md:min-w-[320px]" />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-3 lg:gap-4">
+          <nav className="hidden xl:flex items-center gap-4 lg:gap-6">
             {navLinks.map((link) => (
               <NavLink 
                 key={link.to}
@@ -56,18 +55,18 @@ export const Navbar: React.FC = () => {
             {/* Language Toggle */}
             <button 
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-xs font-bold text-neutral-700 hover:text-primary transition-colors px-2 py-1.5 rounded-lg bg-neutral-50 hover:bg-neutral-100 border border-neutral-200"
+              className="flex items-center gap-1 text-xs font-bold text-neutral-700 hover:text-primary transition-colors px-3 py-1.5 rounded-lg bg-neutral-50 border border-neutral-200"
             >
               <Globe className="h-3.5 w-3.5" />
               <span>{language === 'en' ? 'ESP' : 'ENG'}</span>
             </button>
 
-            <div className="flex items-center gap-1.5">
-              <Button variant="primary" href="tel:4054703232" className="px-2.5 py-1.5 text-[10px] lg:text-[11px] whitespace-nowrap">
-                {t('nav.contact')} <Phone className="h-3 w-3 ml-1" />
+            <div className="flex items-center gap-2">
+              <Button variant="primary" href="tel:4054703232" className="px-4 py-2 text-xs lg:text-sm">
+                {t('nav.contact')} <Phone className="h-4 w-4 ml-1.5" />
               </Button>
-              <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-2.5 py-1.5 text-[10px] lg:text-[11px] whitespace-nowrap">
-                {t('nav.directions')} <Navigation className="h-3 w-3 ml-1" />
+              <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-xs lg:text-sm">
+                {t('nav.directions')} <Navigation className="h-4 w-4 ml-1.5" />
               </Button>
             </div>
           </nav>
