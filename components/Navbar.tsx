@@ -29,11 +29,11 @@ export const Navbar: React.FC = () => {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-sm px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Horizontal padding removed here so Logo can sit at the absolute edge of the 7xl grid */}
-        <div className="flex justify-between items-center h-24 md:h-36 lg:h-40 transition-all duration-300">
+        <div className="flex justify-between items-center h-28 md:h-44 lg:h-48 transition-all duration-300">
           
           {/* Logo Container - Now perfectly aligned with the grid edge */}
-          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-3">
-            <Logo className="h-16 md:h-28 lg:h-32 min-w-[150px] md:min-w-[240px]" />
+          <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-2">
+            <Logo className="h-20 md:h-36 lg:h-40 min-w-[180px] md:min-w-[280px]" />
           </Link>
 
           {/* Desktop Nav */}

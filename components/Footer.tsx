@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="flex flex-col">
             {/* Footer Logo Container - Adjusted for better proportion on top of text */}
-            <div className="h-20 md:h-24 lg:h-28 flex items-center justify-start mb-6">
+            <div className="h-24 md:h-32 lg:h-36 flex items-center justify-start mb-6">
               <Logo className="h-full w-full" />
             </div>
 
