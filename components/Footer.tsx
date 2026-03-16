@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col">
             {/* Footer Logo Container */}
             <div className="flex items-center justify-start mb-6">
-              <Logo className="h-24 md:h-32 lg:h-36 w-[200px] md:w-[280px]" />
+              <Logo className="h-28 md:h-36 lg:h-40 w-[240px] md:w-[320px]" />
             </div>
 
             <p className="text-neutral-500 text-base leading-relaxed max-w-sm mb-8">
