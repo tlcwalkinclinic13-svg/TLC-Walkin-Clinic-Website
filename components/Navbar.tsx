@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
           
           {/* Logo Container - Keeping the large size from the picture */}
           <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-2">
-            <Logo className="h-28 md:h-36 lg:h-40 min-w-[200px] md:min-w-[320px]" />
+            <Logo className="h-[75px] md:h-24 lg:h-[107px] min-w-[400px] md:min-w-[640px]" />
           </Link>
 
           {/* Desktop Nav */}
