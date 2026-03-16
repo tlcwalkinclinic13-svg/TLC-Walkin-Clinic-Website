@@ -30,9 +30,9 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center h-32 md:h-40 lg:h-44 transition-all duration-300">
           
-          {/* Logo Container - Keeping the large size from the picture */}
+          {/* Logo Container - Adjusted size based on user request */}
           <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-2">
-            <Logo className="h-[75px] md:h-24 lg:h-[107px] min-w-[400px] md:min-w-[640px]" />
+            <Logo className="h-[112px] md:h-[144px] lg:h-[160px] min-w-[200px] md:min-w-[320px]" />
           </Link>
 
           {/* Desktop Nav */}
