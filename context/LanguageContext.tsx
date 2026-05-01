@@ -20,6 +20,7 @@ const translations = {
     'nav.services': 'Services',
     'nav.telemedicine': 'Telemedicine',
     'nav.insurance': 'Insurance',
+    'nav.membership': 'Membership',
     'nav.pricing': 'Pricing',
     'nav.directions': 'Get Directions',
     'nav.contact': 'Contact Us',
@@ -58,6 +59,12 @@ const translations = {
     'hero.special.title': 'Special Notice:',
     'hero.special.msg': 'Closing Dec 25th for Christmas Day',
 
+    // Promotion Banner
+    'promo.badge': 'New Program',
+    'promo.title': 'TLC Direct Walk-In Care Membership',
+    'promo.desc': 'Join our exclusive membership program for convenient, affordable, and comprehensive walk-in care.',
+    'promo.btn': 'Learn More',
+
     // Steps
     'steps.label': 'Simple Process',
     'steps.title': 'How to Visit Us',
@@ -85,7 +92,7 @@ const translations = {
     'about.title': 'About Us',
     'about.subtitle': 'Quality Medical Care in Bethany, Oklahoma.',
     'about.heading': 'Committed to Your Health',
-    'about.p1': 'TLC Walk-in Clinic is committed to providing high-quality medical care to the Bethany community and beyond. With a focus on patient-centered care, we strive to offer comprehensive medical services in a welcoming and compassionate environment.',
+    'about.p1': 'We took this clinic over in June in 2024. We soon learned that owning a medical business was a far greater task than we had expected. Our desire was to provide quality healthcare with the idea of expanding into other rural areas of Oklahoma. We discovered an ongoing war that is fought everyday by healthcare providers and patients alike: insurance companies. It was pretty apparent that patients were paying high premiums with very little coverage. Our mission statement is to provide a variety of healthcare services with quality in mind that is affordable to the working man or woman. Too many times, people lack healthcare resources so we are attempting to fill that gap.',
     'about.p2': 'Our clinic is dedicated to serving our patients with the utmost care and professionalism. We believe in building lasting relationships with our patients and their families, ensuring their well-being and satisfaction with our services.',
     'about.val1.title': 'Quality Care',
     'about.val1.desc': 'We are committed to providing high-quality medical care to the Bethany community and beyond.',
@@ -104,7 +111,7 @@ const translations = {
     // Service Items
     'svc.imaging.title': 'On-site Imaging',
     'svc.imaging.desc': 'We specialize in providing exceptional care for fractures, utilizing state-of-the-art XR technology to ensure accurate diagnosis.',
-    'svc.imaging.1': 'Muscle Sprains', 'svc.imaging.2': 'Dislocations', 'svc.imaging.3': 'Fracturas',
+    'svc.imaging.1': 'Muscle Sprains', 'svc.imaging.2': 'Dislocations', 'svc.imaging.3': 'Fracture',
     
     'svc.resp.title': 'Respiratory Symptoms',
     'svc.resp.desc': 'Point of care testing for Covid-19, Strep, Influenza A&B, RSV. We are equipped with breathing treatments for asthma.',
@@ -115,7 +122,7 @@ const translations = {
     'svc.vax.1': 'Flu Shots', 'svc.vax.2': 'Tetanus',
 
     'svc.gastro.title': 'Gastrointestinal',
-    'svc.gastro.desc': 'Testing for pregnancy, UTIs, and STI Testing along with associated symptoms like abdominal pain.',
+    'svc.gastro.desc': 'Testing for UTI\'s, pregnancy, and STD\'s along with associated symptoms like abdominal pain.',
     'svc.gastro.1': 'STDs/STIs', 'svc.gastro.2': 'Urinary Tract Infection', 'svc.gastro.3': 'Nausea/Vomiting',
 
     'svc.weight.title': 'Weight Loss',
@@ -127,7 +134,7 @@ const translations = {
     'svc.minor.1': 'Foreign Body Removal', 'svc.minor.2': 'Lacerations', 'svc.minor.3': 'Abscess I&D', 'svc.minor.4': 'Minor Burns',
 
     'svc.blood.title': 'Bloodwork',
-    'svc.blood.desc': 'Partnered with DLO to draw certain labs depending on the work-up indicated.',
+    'svc.blood.desc': 'Laboratory studies are drawn in-house, and we partner with DLO for accurate, timely results.',
     'svc.blood.1': 'Comprehensive Panels', 'svc.blood.2': 'Specific Screenings',
 
     'svc.sports.title': 'Sports Physicals',
@@ -236,6 +243,7 @@ const translations = {
     'nav.services': 'Servicios',
     'nav.telemedicine': 'Telemedicina',
     'nav.insurance': 'Seguros',
+    'nav.membership': 'Membresía',
     'nav.pricing': 'Precios',
     'nav.directions': 'Cómo Llegar',
     'nav.contact': 'Contáctenos',
@@ -274,6 +282,12 @@ const translations = {
     'hero.special.title': 'Aviso Especial:',
     'hero.special.msg': 'Cerrado el 25 de Diciembre por Navidad',
 
+    // Promotion Banner
+    'promo.badge': 'Nuevo Programa',
+    'promo.title': 'Membresía de Atención Directa Sin Cita de TLC',
+    'promo.desc': 'Únase a nuestro exclusivo programa de membresía para recibir atención sin cita conveniente, asequible y completa.',
+    'promo.btn': 'Saber Más',
+
     // Steps
     'steps.label': 'Proceso Simple',
     'steps.title': 'Cómo Visitarnos',
@@ -301,7 +315,7 @@ const translations = {
     'about.title': 'Sobre Nosotros',
     'about.subtitle': 'Atención Médica de Calidad en Bethany, Oklahoma.',
     'about.heading': 'Comprometidos con su Salud',
-    'about.p1': 'TLC Walk-in Clinic se compromete a brindar atención médica de alta calidad a la comunidad de Bethany y más allá. Con un enfoque en la atención centrada en el paciente, nos esforzamos por ofrecer servicios médicos integrales en un entorno acogedor y compasivo.',
+    'about.p1': 'Tomamos el control de esta clínica en junio de 2024. Pronto nos dimos cuenta de que tener un negocio médico era una tarea mucho más grande de lo que esperábamos. Nuestro deseo era brindar atención médica de calidad con la idea de expandirnos a otras áreas rurales de Oklahoma. Descubrimos una guerra continua que se libra todos los días por los proveedores de atención médica y los pacientes por igual: las compañías de seguros. Era bastante evidente que los pacientes pagaban primas altas con muy poca cobertura. Nuestra declaración de misión es proporcionar una variedad de servicios de atención médica teniendo en mente la calidad y que sea asequible para el trabajador y la trabajadora. Demasiadas veces las personas carecen de recursos de atención médica, por lo que intentamos llenar ese vacío.',
     'about.p2': 'Nuestra clínica está dedicada a servir a nuestros pacientes con el mayor cuidado y profesionalismo. Creemos en construir relaciones duraderas con nuestros pacientes y sus familias, asegurando su bienestar y satisfacción con nuestros servicios.',
     'about.val1.title': 'Atención de Calidad',
     'about.val1.desc': 'Estamos comprometidos a brindar atención médica de alta calidad a la comunidad de Bethany y más allá.',

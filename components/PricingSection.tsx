@@ -13,12 +13,10 @@ export const PricingSection: React.FC = () => {
     { name: t('price.xray'), price: '$70' },
     { name: t('price.ear'), price: '$45' },
     { name: t('price.ekg'), price: '$75' },
-    { name: t('price.std'), price: '$125' },
-    { name: t('price.std_blood'), price: '$250' },
     { name: t('price.covid'), price: '$30' },
     { name: t('price.strep'), price: '$15' },
     { name: t('price.glucose'), price: '$10' },
-    { name: t('price.tb'), price: '$25' },
+    { name: t('price.tb'), price: '$30' },
     { name: t('price.urine'), price: '$25' },
     { name: t('price.preg'), price: '$10' },
   ];

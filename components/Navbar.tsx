@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
     { label: t('nav.home'), to: '/' },
     { label: t('nav.services'), to: '/services' },
     { label: t('nav.telemedicine'), to: '/telemedicine' },
-    { label: t('nav.insurance'), to: '/insurance' },
+    { label: t('nav.membership'), to: '/membership' },
     { label: t('nav.pricing'), to: '/pricing' },
     { label: t('nav.about'), to: '/offers' },
   ];
@@ -28,11 +28,11 @@ export const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-sm px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center h-32 md:h-40 lg:h-44 transition-all duration-300">
+        <div className="flex justify-between items-center h-24 md:h-28 lg:h-32 transition-all duration-300">
           
           {/* Logo Container - Adjusted size based on user request */}
           <Link to="/" className="group no-underline shrink-0 block h-full flex items-center py-2">
-            <Logo className="h-[112px] md:h-[144px] lg:h-[160px] min-w-[200px] md:min-w-[320px]" />
+            <Logo className="h-16 md:h-20 lg:h-24 min-w-[150px] md:min-w-[220px]" />
           </Link>
 
           {/* Desktop Nav */}
@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
                 to={link.to}
                 end={link.to === '/'} 
                 className={({ isActive }) => 
-                  `text-xs lg:text-sm font-bold transition-colors font-heading tracking-tight whitespace-nowrap ${
+                  `text-base lg:text-lg font-bold transition-colors font-heading tracking-tight whitespace-nowrap ${
                     isActive ? "text-primary" : "text-neutral-700 hover:text-primary"
                   }`
                 }
@@ -55,18 +55,24 @@ export const Navbar: React.FC = () => {
             {/* Language Toggle */}
             <button 
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-xs font-bold text-neutral-700 hover:text-primary transition-colors px-3 py-1.5 rounded-lg bg-neutral-50 border border-neutral-200"
+              className="flex items-center gap-1 text-sm lg:text-base font-bold text-neutral-700 hover:text-primary transition-colors px-3 py-1.5 rounded-lg bg-neutral-50 border border-neutral-200"
             >
-              <Globe className="h-3.5 w-3.5" />
+              <Globe className="h-4 w-4" />
               <span>{language === 'en' ? 'ESP' : 'ENG'}</span>
             </button>
 
             <div className="flex items-center gap-2">
-              <Button variant="primary" href="tel:4054703232" className="px-4 py-2 text-xs lg:text-sm">
-                {t('nav.contact')} <Phone className="h-4 w-4 ml-1.5" />
-              </Button>
-              <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-xs lg:text-sm">
-                {t('nav.directions')} <Navigation className="h-4 w-4 ml-1.5" />
+              <div className="relative group flex items-center justify-center">
+                <Button variant="primary" href="tel:4054703232" className="px-5 py-2.5 text-sm lg:text-base">
+                  {t('nav.contact')} <Phone className="h-4 w-4 ml-2" />
+                </Button>
+                <div className="absolute top-full mt-3 left-1/2 -translate-x-1/2 px-3 py-2 bg-neutral-900 text-white text-sm font-bold rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl z-50">
+                  405-470-3232
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 border-4 border-transparent border-b-neutral-900"></div>
+                </div>
+              </div>
+              <Button variant="primary" href={mapsUrl} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 text-sm lg:text-base">
+                {t('nav.directions')} <Navigation className="h-4 w-4 ml-2" />
               </Button>
             </div>
           </nav>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Facebook, Instagram, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Logo } from './Logo';
 
@@ -90,14 +91,22 @@ export const Footer: React.FC = () => {
             </ul>
 
             <h5 className="font-bold font-heading text-dark text-lg mb-6">{t('footer.resources')}</h5>
-            <a 
-              href="/special-offer.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary font-bold hover:underline"
-            >
-              {t('offers.deal1.btn')}
-            </a>
+            <div className="flex flex-col gap-3">
+              <Link
+                to="/insurance"
+                className="inline-flex items-center gap-2 text-neutral-600 hover:text-primary transition-colors font-medium border-l-2 border-transparent hover:border-primary pl-2"
+              >
+                {t('nav.insurance')}
+              </Link>
+              <a 
+                href="/special-offer.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-neutral-600 hover:text-primary transition-colors font-medium border-l-2 border-transparent hover:border-primary pl-2"
+              >
+                {t('offers.deal1.btn')}
+              </a>
+            </div>
           </div>
         </div>
 
