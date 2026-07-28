@@ -6,8 +6,8 @@ export const PricingSection: React.FC = () => {
 
   const prices = [
     { name: t('price.office'), price: t('price.office.val') },
-    { name: t('price.sports'), price: '$20' },
-    { name: t('price.sports_college'), price: '$30' },
+    { name: t('price.sports'), price: '$25' },
+    { name: t('price.sports_college'), price: '$35' },
     { name: t('price.dot'), price: '$100' },
     { name: t('price.lac'), price: '$70' },
     { name: t('price.xray'), price: '$70' },

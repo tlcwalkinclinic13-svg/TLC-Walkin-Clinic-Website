@@ -56,8 +56,10 @@ const translations = {
     'hero.hours.title': 'Clinic Hours',
     'hero.hours.monfri': 'Mon - Fri',
     'hero.hours.time': '8:00 AM – 5:30 PM',
-    'hero.special.title': 'Special Notice:',
-    'hero.special.msg': 'Closing Dec 25th for Christmas Day',
+    'hero.special.title': 'Upcoming Price Adjustment (Effective Aug 1st):',
+    'hero.special.msg': 'Sports physical pricing will update to $25 for High School and $35 for College students.',
+    'hero.special.btn': 'Special Notice: Price Change Aug 1st',
+    'hero.special.close': 'Got It',
 
     // Promotion Banner
     'promo.badge': 'New Program',
@@ -139,7 +141,7 @@ const translations = {
 
     'svc.sports.title': 'Sports Physicals',
     'svc.sports.desc': 'We offer affordable sports physicals for K-12 and college students.',
-    'svc.sports.1': '$20 Gradeschool Physical', 'svc.sports.2': '$30 College Physical',
+    'svc.sports.1': '$25 High School / Gradeschool Physical', 'svc.sports.2': '$35 College Physical',
     'svc.sports.form': 'Download OSSAA Physical Form (PDF)',
 
     'svc.misc.title': 'Miscellaneous',
@@ -279,8 +281,10 @@ const translations = {
     'hero.hours.title': 'Horario de la Clínica',
     'hero.hours.monfri': 'Lun - Vie',
     'hero.hours.time': '8:00 AM – 5:30 PM',
-    'hero.special.title': 'Aviso Especial:',
-    'hero.special.msg': 'Cerrado el 25 de Diciembre por Navidad',
+    'hero.special.title': 'Próximo Cambio de Precio (Efectivo el 1 de Agosto):',
+    'hero.special.msg': 'Los precios de exámenes físicos deportivos cambiarán a $25 para Preparatoria (High School) y $35 para Universidad.',
+    'hero.special.btn': 'Aviso Especial: Cambio de Precio 1 de Ago',
+    'hero.special.close': 'Entendido',
 
     // Promotion Banner
     'promo.badge': 'Nuevo Programa',
@@ -362,7 +366,7 @@ const translations = {
 
     'svc.sports.title': 'Físicos Deportivos',
     'svc.sports.desc': 'Ofrecemos exámenes físicos deportivos asequibles para estudiantes de K-12 y universitarios.',
-    'svc.sports.1': '$20 Físico Escolar', 'svc.sports.2': '$30 Físico Universitario',
+    'svc.sports.1': '$25 Físico Escolar', 'svc.sports.2': '$35 Físico Universitario',
     'svc.sports.form': 'Descargar Formulario Físico de OSSAA (PDF)',
 
     'svc.misc.title': 'Misceláneos',
