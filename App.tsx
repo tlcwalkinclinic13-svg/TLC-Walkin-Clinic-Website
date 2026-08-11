@@ -14,6 +14,7 @@ import { InsurancePage } from './pages/InsurancePage';
 import { TelemedicinePage } from './pages/TelemedicinePage';
 import { SpecialOffersPage } from './pages/SpecialOffersPage';
 import { MembershipPage } from './pages/MembershipPage';
+import { SMSPrivacyPage } from './pages/SMSPrivacyPage';
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -42,6 +43,8 @@ const App: React.FC = () => {
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/offers" element={<SpecialOffersPage />} />
               <Route path="/membership" element={<MembershipPage />} />
+              <Route path="/sms-privacy" element={<SMSPrivacyPage />} />
+              <Route path="/sms-privacy-policy" element={<SMSPrivacyPage />} />
             </Routes>
           </main>
           <Footer />

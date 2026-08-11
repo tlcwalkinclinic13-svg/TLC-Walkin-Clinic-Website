@@ -247,7 +247,7 @@ export const Hero: React.FC = () => {
         {/* Background Image (Static) */}
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src="tlc-staff.jpg"
+            src="/tlc-staff.jpg"
             alt="TLC Clinic Staff Friendsgiving Celebration" 
             className="w-full h-full object-cover object-center transition-transform duration-[20s] group-hover:scale-105"
           />

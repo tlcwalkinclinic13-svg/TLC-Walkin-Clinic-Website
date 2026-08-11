@@ -98,6 +98,12 @@ export const Footer: React.FC = () => {
               >
                 {t('nav.insurance')}
               </Link>
+              <Link
+                to="/sms-privacy-policy"
+                className="inline-flex items-center gap-2 text-neutral-600 hover:text-primary transition-colors font-medium border-l-2 border-transparent hover:border-primary pl-2"
+              >
+                {t('footer.sms_privacy')}
+              </Link>
               <a 
                 href="/special-offer.pdf" 
                 target="_blank" 

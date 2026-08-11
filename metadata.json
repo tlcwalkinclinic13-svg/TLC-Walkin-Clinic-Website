@@ -1,5 +1,6 @@
 {
   "name": "TLC Walk-in Clinic",
-  "description": "A modern, responsive medical clinic website featuring a bento-grid service layout, sticky navigation, and appointment scheduling sections.",
-  "requestFramePermissions": []
+  "description": "A modern, responsive medical clinic website featuring a bento-grid service layout, sticky navigation, appointment scheduling, and patient policies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
