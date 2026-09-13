@@ -69,7 +69,7 @@ export const Hero: React.FC = () => {
                   <Phone className="h-4 w-4" /> (405) 470-3232
                 </Button>
                 <Button variant="outline" href="https://www.google.com/maps/dir//7900+NW+23rd+St+%231,+Bethany,+OK+73008" target="_blank" rel="noopener noreferrer">
-                  Get Directions
+                  {t('nav.directions')}
                 </Button>
             </div>
 

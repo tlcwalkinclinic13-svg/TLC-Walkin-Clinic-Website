@@ -88,6 +88,9 @@ export const Navbar: React.FC = () => {
               </button>
             <button 
               className="p-2 text-dark hover:text-primary transition-colors bg-neutral-50 rounded-xl border border-neutral-200"
+              aria-label={isMenuOpen ? (language === 'es' ? 'Cerrar menú' : 'Close menu') : (language === 'es' ? 'Abrir menú' : 'Open menu')}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -99,7 +102,7 @@ export const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="xl:hidden bg-white border-b border-neutral-100 animate-in fade-in slide-in-from-top-2 duration-300">
-          <nav className="flex flex-col p-8 space-y-6">
+          <nav id="mobile-navigation" className="flex flex-col p-8 space-y-6">
             {navLinks.map((link) => (
               <NavLink 
                 key={link.to} 

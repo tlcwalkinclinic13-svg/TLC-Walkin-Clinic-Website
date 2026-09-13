@@ -1,5 +1,5 @@
 
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
 
 type Language = 'en' | 'es';
 
@@ -42,7 +42,7 @@ const translations = {
     'offers.deal1.btn': 'View Special Offer Form (PDF)',
 
     // Hero - Slide 1 (Original)
-    'hero.open': 'Open Today until 5:30 PM',
+    'hero.open': 'Mon–Fri · 8:00 AM–5:30 PM',
     'hero.title': 'Urgent Care & Walk-In Clinic in Bethany, OK',
     'hero.subtitle': 'Fast, convenient care for illnesses, minor injuries, X-rays, lab testing, physicals, and more. Walk-ins welcome—no appointment needed for general urgent care.',
     'hero.viewServices': 'View Services',
@@ -296,7 +296,7 @@ const translations = {
     'offers.deal1.btn': 'Ver Formulario de Oferta Especial (PDF)',
 
     // Hero - Slide 1 (Original)
-    'hero.open': 'Abierto hoy hasta las 5:30 PM',
+    'hero.open': 'Lun–Vie · 8:00 AM–5:30 PM',
     'hero.title': 'Clínica de Urgencias sin Cita en Bethany, OK',
     'hero.subtitle': 'Atención rápida para enfermedades, lesiones menores, radiografías, pruebas de laboratorio, exámenes físicos y más. Pacientes sin cita son bienvenidos.',
     'hero.viewServices': 'Ver Servicios',
@@ -524,6 +524,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
+
+  useEffect(() => { document.documentElement.lang = language; }, [language]);
 
   const t = (key: string): string => {
     return (translations[language] as Record<string, string>)[key] || key;

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { TickerBar } from './components/TickerBar';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
-import { LanguageProvider } from './context/LanguageContext';
+import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
 // Pages
 import { Home } from './pages/Home';
@@ -23,6 +23,19 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
+};
+
+// Preserve links saved before the move from hash routing to clean URLs.
+if (window.location.hash.startsWith('#/')) {
+  window.history.replaceState(null, '', window.location.hash.slice(1));
+}
+
+const NotFound = () => {
+  const { language } = useLanguage();
+  return <section className="max-w-3xl mx-auto px-6 py-24 text-center">
+    <h1 className="text-3xl font-bold mb-4">{language === 'es' ? 'Página no encontrada' : 'Page not found'}</h1>
+    <Link to="/" className="text-primary underline">{language === 'es' ? 'Volver al inicio' : 'Return to the homepage'}</Link>
+  </section>;
 };
 
 const routeMetadata: Record<string, { title: string; description: string; index?: boolean }> = {
@@ -63,10 +76,11 @@ const routeMetadata: Record<string, { title: string; description: string; index?
 };
 
 const SeoManager = () => {
-  const { pathname } = useLocation();
+  const { pathname: rawPathname } = useLocation();
+  const pathname = rawPathname.replace(/\/+$/, '') || '/';
 
   useEffect(() => {
-    const metadata = routeMetadata[pathname] ?? routeMetadata['/'];
+    const metadata = routeMetadata[pathname] ?? { title: 'Page not found | TLC Walk-in Clinic', description: 'The requested page could not be found.', index: false };
     const canonicalUrl = `https://www.tlcwalkinclinic.com${pathname === '/' ? '/' : pathname}`;
     document.title = metadata.title;
 
@@ -106,6 +120,7 @@ const App: React.FC = () => {
               <Route path="/membership" element={<MembershipPage />} />
               <Route path="/sms-privacy" element={<SMSPrivacyPage />} />
               <Route path="/sms-privacy-policy" element={<SMSPrivacyPage />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />

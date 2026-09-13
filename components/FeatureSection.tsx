@@ -92,7 +92,7 @@ export const DOTSection: React.FC = () => {
               {/* Form Links for DOT */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-6 border-t border-white/10">
                 <a 
-                  href="MCSA-5875-DOT-Form.pdf" 
+                  href="/MCSA-5875-DOT-Form.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
@@ -101,7 +101,7 @@ export const DOTSection: React.FC = () => {
                   <span className="text-sm font-semibold">{t('dot.form1')}</span>
                 </a>
                 <a 
-                  href="MCSA-5876-DOT-Certificate.pdf" 
+                  href="/MCSA-5876-DOT-Certificate.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
@@ -137,7 +137,7 @@ export const AboutUsSection: React.FC = () => {
               {t('about.desc.home')}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary" href="/#/about">
+              <Button variant="primary" to="/about">
                 {t('about.btn.home')}
               </Button>
             </div>
