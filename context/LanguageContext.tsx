@@ -43,8 +43,8 @@ const translations = {
 
     // Hero - Slide 1 (Original)
     'hero.open': 'Open Today until 5:30 PM',
-    'hero.title': 'Personalized care for every stage of your wellness.',
-    'hero.subtitle': 'Expert urgent care, sports physicals, and DOT exams in Bethany, OK. No appointment needed for general illness.',
+    'hero.title': 'Urgent Care & Walk-In Clinic in Bethany, OK',
+    'hero.subtitle': 'Fast, convenient care for illnesses, minor injuries, X-rays, lab testing, physicals, and more. Walk-ins welcome—no appointment needed for general urgent care.',
     'hero.viewServices': 'View Services',
 
     // Hero - Slide 2 (Contact & Hours)
@@ -56,8 +56,8 @@ const translations = {
     'hero.hours.title': 'Clinic Hours',
     'hero.hours.monfri': 'Mon - Fri',
     'hero.hours.time': '8:00 AM – 5:30 PM',
-    'hero.special.title': 'Upcoming Price Adjustment (Effective Aug 1st):',
-    'hero.special.msg': 'Sports physical pricing will update to $25 for High School and $35 for College students.',
+    'hero.special.title': 'Current Sports Physical Pricing',
+    'hero.special.msg': 'Sports physicals are $25 for high school students and $35 for college students.',
     'hero.special.btn': 'Special Notice: Price Change Aug 1st',
     'hero.special.close': 'Got It',
 
@@ -297,8 +297,8 @@ const translations = {
 
     // Hero - Slide 1 (Original)
     'hero.open': 'Abierto hoy hasta las 5:30 PM',
-    'hero.title': 'Atención personalizada para cada etapa de su bienestar.',
-    'hero.subtitle': 'Atención de urgencia experta, exámenes físicos deportivos y exámenes DOT en Bethany, OK. No se necesita cita para enfermedades generales.',
+    'hero.title': 'Clínica de Urgencias sin Cita en Bethany, OK',
+    'hero.subtitle': 'Atención rápida para enfermedades, lesiones menores, radiografías, pruebas de laboratorio, exámenes físicos y más. Pacientes sin cita son bienvenidos.',
     'hero.viewServices': 'Ver Servicios',
 
     // Hero - Slide 2 (Contact & Hours)
@@ -310,8 +310,8 @@ const translations = {
     'hero.hours.title': 'Horario de la Clínica',
     'hero.hours.monfri': 'Lun - Vie',
     'hero.hours.time': '8:00 AM – 5:30 PM',
-    'hero.special.title': 'Próximo Cambio de Precio (Efectivo el 1 de Agosto):',
-    'hero.special.msg': 'Los precios de exámenes físicos deportivos cambiarán a $25 para Preparatoria (High School) y $35 para Universidad.',
+    'hero.special.title': 'Precios Actuales de Exámenes Físicos Deportivos',
+    'hero.special.msg': 'Los exámenes físicos deportivos cuestan $25 para preparatoria y $35 para universidad.',
     'hero.special.btn': 'Aviso Especial: Cambio de Precio 1 de Ago',
     'hero.special.close': 'Entendido',
 

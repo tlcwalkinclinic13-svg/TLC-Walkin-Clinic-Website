@@ -8,10 +8,10 @@ import { useLanguage } from '../context/LanguageContext';
 export const Hero: React.FC = () => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // You can change the closing message in LanguageContext.tsx under 'hero.special.msg'
-  const showSpecialNotice = true; // Set to false to hide the special notice slot
+  const showSpecialNotice = false; // Set to true when a current, time-sensitive notice is needed.
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -61,13 +61,16 @@ export const Hero: React.FC = () => {
               {t('hero.subtitle')}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-2">
-              <Button variant="primary" to="/services">
-                {t('hero.viewServices')}
-              </Button>
-              <Button variant="white" href="tel:4054703232">
-                <Phone className="h-4 w-4" /> (405) 470-3232
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 mb-2">
+                <Button variant="primary" to="/services">
+                  {t('hero.viewServices')}
+                </Button>
+                <Button variant="white" href="tel:4054703232">
+                  <Phone className="h-4 w-4" /> (405) 470-3232
+                </Button>
+                <Button variant="outline" href="https://www.google.com/maps/dir//7900+NW+23rd+St+%231,+Bethany,+OK+73008" target="_blank" rel="noopener noreferrer">
+                  Get Directions
+                </Button>
             </div>
 
             {renderNoticeBanner()}
@@ -248,7 +251,7 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 w-full h-full">
           <img 
             src="/tlc-staff.jpg"
-            alt="TLC Clinic Staff Friendsgiving Celebration" 
+            alt="TLC Walk-in Clinic care team in Bethany, Oklahoma" 
             className="w-full h-full object-cover object-center transition-transform duration-[20s] group-hover:scale-105"
           />
           {/* Gradient Overlay */}
@@ -277,4 +280,3 @@ export const Hero: React.FC = () => {
     </div>
   );
 };
-
