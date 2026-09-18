@@ -6,7 +6,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const mapsUrl = "https://www.google.com/maps/dir//7900+NW+23rd+St+%231,+Bethany,+OK+73008";
   const instagramUrl = "https://www.instagram.com/tlcwalkin.clinic/";
   const facebookUrl = "https://www.facebook.com/tlcwalkinclinic/";
@@ -91,7 +91,7 @@ export const Footer: React.FC = () => {
             </ul>
 
             <h5 className="font-bold font-heading text-dark text-lg mb-6">{t('footer.resources')}</h5>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3"><Link to="/urgent-care-bethany-ok" className="text-neutral-600 hover:text-primary font-medium pl-2">{language === 'es' ? 'Atención urgente en Bethany' : 'Urgent Care in Bethany'}</Link>
               <Link
                 to="/insurance"
                 className="inline-flex items-center gap-2 text-neutral-600 hover:text-primary transition-colors font-medium border-l-2 border-transparent hover:border-primary pl-2"

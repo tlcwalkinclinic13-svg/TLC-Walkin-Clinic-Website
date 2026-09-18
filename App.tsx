@@ -16,6 +16,8 @@ import { SpecialOffersPage } from './pages/SpecialOffersPage';
 import { MembershipPage } from './pages/MembershipPage';
 import { SMSPrivacyPage } from './pages/SMSPrivacyPage';
 
+import { UrgentCarePage } from './pages/UrgentCarePage';
+
 // ScrollToTop Component
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -42,6 +44,10 @@ const routeMetadata: Record<string, { title: string; description: string; index?
   '/': {
     title: 'Urgent Care in Bethany, OK | TLC Walk-in Clinic',
     description: 'TLC Walk-in Clinic provides walk-in urgent care in Bethany, OK for illnesses, minor injuries, X-rays, testing, physicals, and more. No appointment needed.',
+  },
+  '/urgent-care-bethany-ok': {
+    title: 'Walk-In Urgent Care in Bethany, OK | TLC Walk-in Clinic',
+    description: 'Visit TLC Walk-in Clinic in Bethany, OK for illnesses and minor injuries. No appointment needed for general urgent care. Call (405) 470-3232.',
   },
   '/services': {
     title: 'Urgent Care Services in Bethany, OK | TLC Walk-in Clinic',
@@ -112,7 +118,7 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/urgent-care-bethany-ok" element={<UrgentCarePage />} /><Route path="/services" element={<ServicesPage />} />
               <Route path="/insurance" element={<InsurancePage />} />
               <Route path="/telemedicine" element={<TelemedicinePage />} />
               <Route path="/pricing" element={<PricingPage />} />
