@@ -34,7 +34,7 @@ export const WeightLossSection: React.FC = () => {
           </div>
 
           <div className="relative h-[400px] rounded-3xl overflow-hidden bg-primary-dark shadow-inner border border-white/10">
-            <img 
+            <img loading="lazy" decoding="async" 
               src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
               alt="Doctor Consultation" 
               className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
@@ -62,7 +62,7 @@ export const DOTSection: React.FC = () => {
           
           {/* Image Left for variation */}
           <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden bg-neutral-800 lg:order-1 order-2 shadow-inner border border-white/5">
-            <img 
+            <img loading="lazy" decoding="async" 
               src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
               alt="Truck Driver DOT Exam" 
               className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
@@ -144,7 +144,7 @@ export const AboutUsSection: React.FC = () => {
           </div>
 
           <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-md">
-            <img 
+            <img loading="lazy" decoding="async" 
               src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
               alt="Clinic Interior" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
