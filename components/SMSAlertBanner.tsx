@@ -33,9 +33,9 @@ export const SMSAlertBanner: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-1">
+                <h2 className="text-lg sm:text-xl font-heading font-bold text-white mb-1">
                   {t('home.sms_alert.title')}
-                </h3>
+                </h2>
                 
                 <p className="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-2xl">
                   {t('home.sms_alert.desc')}

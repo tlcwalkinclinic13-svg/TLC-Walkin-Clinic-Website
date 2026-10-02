@@ -48,15 +48,6 @@ export const Hero: React.FC = () => {
         return (
           /* SLIDE 1: Original Intro */
           <div key="slide-0" className="animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-backwards">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-full px-4 py-2 text-sm font-semibold mb-6">
-              <CheckCircle className="h-4 w-4 text-primary-light" />
-              <span>{t('hero.open')}</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-heading font-bold leading-[1.1] mb-6">
-              {t('hero.title')}
-            </h1>
-            
             <p className="text-lg md:text-xl text-neutral-200 mb-8 max-w-lg">
               {t('hero.subtitle')}
             </p>
@@ -85,9 +76,9 @@ export const Hero: React.FC = () => {
               <span>{t('nav.subtitle')}</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-heading font-bold leading-[1.1] mb-6">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold leading-[1.1] mb-6">
               {t('hero.contact.title')}
-            </h1>
+            </h2>
             <p className="text-lg text-neutral-300 mb-8">{t('hero.contact.subtitle')}</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
@@ -155,9 +146,9 @@ export const Hero: React.FC = () => {
                 <span>{t('nav.special')}</span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-heading font-bold leading-[1.1] mb-6 group-hover/slide:text-primary-light transition-colors">
+              <h2 className="text-4xl md:text-6xl font-heading font-bold leading-[1.1] mb-6 group-hover/slide:text-primary-light transition-colors">
                 {t('offers.deal1.title')}
-              </h1>
+              </h2>
               
               <p className="text-lg md:text-xl text-neutral-200 mb-8 max-w-lg">
                 {t('offers.deal1.desc')}
@@ -261,6 +252,15 @@ export const Hero: React.FC = () => {
         {/* Content Slider Container */}
         <div className="relative z-10 w-full max-w-3xl p-8 md:p-16 text-white min-h-[500px] flex flex-col justify-center">
           
+          {currentSlide === 0 && (
+            <div className="self-start inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-full px-4 py-2 text-sm font-semibold mb-6">
+              <CheckCircle className="h-4 w-4 text-primary-light" />
+              <span>{t('hero.open')}</span>
+            </div>
+          )}
+          <h1 className="text-4xl md:text-6xl font-heading font-bold leading-[1.1] mb-6">
+            {t('hero.title')}
+          </h1>
           {renderSlide()}
 
           {/* Slider Dots */}
