@@ -1,6 +1,16 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/urgent-care-bethany-ok", "destination": "/urgent-care-bethany-ok.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/insurance", "destination": "/insurance.html" },
+    { "source": "/telemedicine", "destination": "/telemedicine.html" },
+    { "source": "/pricing", "destination": "/pricing.html" },
+    { "source": "/offers", "destination": "/offers.html" },
+    { "source": "/membership", "destination": "/membership.html" },
+    { "source": "/sms-privacy", "destination": "/sms-privacy.html" },
+    { "source": "/sms-privacy-policy", "destination": "/sms-privacy-policy.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/app.html" }
   ]
 }
