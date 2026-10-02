@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 interface LogoProps {
   className?: string;
+  loading?: 'eager' | 'lazy';
 }
 
 const LOGO_PATHS = [
@@ -13,7 +14,7 @@ const LOGO_PATHS = [
   '/logo.webp'
 ];
 
-export const Logo: React.FC<LogoProps> = ({ className = "" }) => {
+export const Logo: React.FC<LogoProps> = ({ className = "", loading }) => {
   const [currentPathIndex, setCurrentPathIndex] = useState(0);
   const [hasError, setHasError] = useState(false);
 
@@ -38,6 +39,8 @@ export const Logo: React.FC<LogoProps> = ({ className = "" }) => {
       <img 
         src={LOGO_PATHS[currentPathIndex]} 
         alt="TLC Walk-in Clinic" 
+        loading={loading}
+        decoding={loading === 'lazy' ? 'async' : undefined}
         className="h-full w-auto object-contain max-w-none"
         draggable={false}
         onError={handleError}
