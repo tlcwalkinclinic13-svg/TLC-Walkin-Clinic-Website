@@ -10,7 +10,6 @@
     { "source": "/offers", "destination": "/offers.html" },
     { "source": "/membership", "destination": "/membership.html" },
     { "source": "/sms-privacy", "destination": "/sms-privacy.html" },
-    { "source": "/sms-privacy-policy", "destination": "/sms-privacy-policy.html" },
-    { "source": "/((?!.*\\.).*)", "destination": "/app.html" }
+    { "source": "/sms-privacy-policy", "destination": "/sms-privacy-policy.html" }
   ]
 }
