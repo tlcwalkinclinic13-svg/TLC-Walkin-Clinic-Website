@@ -4,11 +4,13 @@ import { SMSAlertBanner } from '../components/SMSAlertBanner';
 import { PromotionBanner } from '../components/PromotionBanner';
 import { WeightLossSection, DOTSection, AboutUsSection } from '../components/FeatureSection';
 import { ReviewsSection } from '../components/ReviewsSection';
+import { LocalCareSection } from '../components/LocalCareSection';
 
 export const Home: React.FC = () => {
   return (
     <>
       <Hero />
+      <LocalCareSection />
       <SMSAlertBanner />
       <PromotionBanner />
       <div className="flex flex-col gap-8 mb-16">

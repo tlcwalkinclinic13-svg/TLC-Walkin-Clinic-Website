@@ -42,8 +42,8 @@ const NotFound = () => {
 
 const routeMetadata: Record<string, { title: string; description: string; index?: boolean }> = {
   '/': {
-    title: 'Urgent Care in Bethany, OK | TLC Walk-in Clinic',
-    description: 'TLC Walk-in Clinic provides walk-in urgent care in Bethany, OK for illnesses, minor injuries, X-rays, testing, physicals, and more. No appointment needed.',
+    title: 'Urgent Care & Walk-in Clinic in Bethany, OK | TLC',
+    description: 'Visit TLC Walk-in Clinic for urgent care in Bethany, OK. Bilingual staff, self-pay options, and no appointment needed for general urgent care. (405) 470-3232.',
   },
   '/urgent-care-bethany-ok': {
     title: 'Walk-In Urgent Care in Bethany, OK | TLC Walk-in Clinic',

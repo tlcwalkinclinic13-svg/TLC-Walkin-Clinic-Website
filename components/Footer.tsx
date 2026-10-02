@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
 
           {/* Visit Us */}
           <div className="md:pt-10">
-            <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.visit')}</h5>
+            <h2 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.visit')}</h2>
             <div className="space-y-6 text-base text-neutral-500">
               <p className="flex gap-3 items-start">
                 <MapPin className="h-6 w-6 text-primary shrink-0" />
@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
 
           {/* Hours */}
           <div className="md:pt-10">
-            <h5 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.hours')}</h5>
+            <h2 className="font-bold font-heading text-dark text-lg mb-8">{t('footer.hours')}</h2>
             <ul className="space-y-4 text-base text-neutral-600 mb-8">
               <li className="flex justify-between border-b border-neutral-100 pb-2">
                 <span>{t('footer.monfri')}:</span>
@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
               </li>
             </ul>
 
-            <h5 className="font-bold font-heading text-dark text-lg mb-6">{t('footer.resources')}</h5>
+            <h2 className="font-bold font-heading text-dark text-lg mb-6">{t('footer.resources')}</h2>
             <div className="flex flex-col gap-3"><Link to="/urgent-care-bethany-ok" className="text-neutral-600 hover:text-primary font-medium pl-2">{language === 'es' ? 'Atención urgente en Bethany' : 'Urgent Care in Bethany'}</Link>
               <Link
                 to="/insurance"
