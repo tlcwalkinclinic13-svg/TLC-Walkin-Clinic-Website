@@ -27,17 +27,26 @@ try {
       rollupOptions: { output: { entryFileNames: 'render-pages.mjs' } },
     },
   });
-  const { renderPages } = await import('../.prerender/render-pages.mjs');
+  const { renderPages, renderNotFound } = await import('../.prerender/render-pages.mjs');
   const template = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const marker = '<div id="root"></div>';
   if (!template.includes(marker)) throw new Error('Homepage root marker was not found');
-  // Preserve the existing SPA fallback for unknown routes.
-  await writeFile(new URL('../dist/app.html', import.meta.url), template);
   for (const { pathname, metadata, html } of renderPages()) {
     const filename = pathname === '/' ? 'index.html' : `${pathname.slice(1)}.html`;
     await writeFile(new URL(`../dist/${filename}`, import.meta.url),
       withMetadata(template, pathname, metadata).replace(marker, () => `<div id="root">${html}</div>`));
   }
+  // Vercel serves this document with HTTP 404 for unmatched URLs.
+  const notFound = withMetadata(template, '/404', {
+    title: 'Page not found | TLC Walk-in Clinic',
+    description: 'The requested page could not be found.',
+    index: false,
+  })
+    .replace(/\s*<link rel="canonical"[^>]*>/, '')
+    .replace(/\s*<meta property="og:url"[^>]*>/, '')
+    .replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')
+    .replace(marker, () => `<div id="root" data-server-not-found="true">${renderNotFound()}</div>`);
+  await writeFile(new URL('../dist/404.html', import.meta.url), notFound);
 } finally {
   await rm(temporaryDirectory, { recursive: true, force: true });
 }

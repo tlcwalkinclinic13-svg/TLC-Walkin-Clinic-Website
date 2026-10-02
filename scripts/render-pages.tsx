@@ -16,3 +16,11 @@ export function renderPages() {
     ),
   }));
 }
+
+export function renderNotFound() {
+  return renderToString(
+    <LanguageProvider>
+      <StaticRouter location="/404"><AppContent /></StaticRouter>
+    </LanguageProvider>
+  );
+}

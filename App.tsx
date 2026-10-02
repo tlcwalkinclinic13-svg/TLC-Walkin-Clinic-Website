@@ -33,8 +33,20 @@ if (typeof window !== 'undefined' && window.location.hash.startsWith('#/')) {
   window.history.replaceState(null, '', window.location.hash.slice(1));
 }
 
+// A server-delivered error document already has a 404 status. Remember its
+// pathname so client navigation to a different missing URL still requests it.
+let serverNotFoundPath = typeof window !== 'undefined' &&
+  document.getElementById('root')?.dataset.serverNotFound === 'true'
+  ? window.location.pathname : null;
+
 const NotFound = () => {
   const { language } = useLanguage();
+  const { pathname } = useLocation();
+  useEffect(() => {
+    if (pathname !== serverNotFoundPath) {
+      window.location.replace(window.location.href);
+    }
+  }, [pathname]);
   return <section className="max-w-3xl mx-auto px-6 py-24 text-center">
     <h1 className="text-3xl font-bold mb-4">{language === 'es' ? 'Página no encontrada' : 'Page not found'}</h1>
     <Link to="/" className="text-primary underline">{language === 'es' ? 'Volver al inicio' : 'Return to the homepage'}</Link>
@@ -46,6 +58,9 @@ const SeoManager = () => {
   const pathname = rawPathname.replace(/\/+$/, '') || '/';
 
   useEffect(() => {
+    // After leaving the error page, another missing route must request the
+    // server even when it has the same pathname as the original 404.
+    if (routeMetadata[pathname]) serverNotFoundPath = null;
     const metadata = routeMetadata[pathname] ?? { title: 'Page not found | TLC Walk-in Clinic', description: 'The requested page could not be found.', index: false };
     const canonicalUrl = `https://www.tlcwalkinclinic.com${pathname === '/' ? '/' : pathname}`;
     document.title = metadata.title;
