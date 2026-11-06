@@ -87,6 +87,9 @@ export const DOTSection: React.FC = () => {
                 <Button variant="primary" href="tel:4054703232">
                   <Phone className="h-4 w-4" /> {t('dot.btn')}
                 </Button>
+                <Button variant="white" to="/dot-physical-bethany-ok">
+                  {t('dot.title')}
+                </Button>
               </div>
 
               {/* Form Links for DOT */}

@@ -13,6 +13,8 @@ export const BentoGrid: React.FC = () => {
       description: t('svc.imaging.desc'),
       bullets: [t('svc.imaging.1'), t('svc.imaging.2'), t('svc.imaging.3')],
       icon: Bone,
+      pageLink: '/x-ray-bethany-ok',
+      pageLabel: t('svc.imaging.title'),
     },
     {
       title: t('svc.resp.title'),
@@ -43,6 +45,8 @@ export const BentoGrid: React.FC = () => {
       description: t('dot.desc'),
       bullets: [],
       icon: Truck,
+      pageLink: '/dot-physical-bethany-ok',
+      pageLabel: t('dot.title'),
       pdfLinks: [
         { url: '/MCSA-5875-DOT-Form.pdf', text: t('dot.form1') },
         { url: '/MCSA-5876-DOT-Certificate.pdf', text: t('dot.form2') }
@@ -107,6 +111,12 @@ export const BentoGrid: React.FC = () => {
               <p className="text-neutral-500 text-sm leading-relaxed mb-6 flex-grow">
                 {service.description}
               </p>
+
+              {service.pageLink && (
+                <Link to={service.pageLink} className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline mb-5">
+                  {service.pageLabel}<ArrowRight className="h-4 w-4" />
+                </Link>
+              )}
               
               {((service.bullets && service.bullets.length > 0) || (service.pdfLinks && service.pdfLinks.length > 0)) && (
                 <div className="pt-4 border-t border-neutral-200 mt-auto">

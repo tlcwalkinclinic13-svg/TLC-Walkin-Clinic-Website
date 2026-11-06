@@ -24,6 +24,8 @@ export const LocalCareSection: React.FC = () => {
           </p>
           <nav aria-label={es ? 'Información para su visita' : 'Information for your visit'} className="flex flex-wrap gap-x-6 gap-y-3 text-primary font-semibold">
             <Link to="/urgent-care-bethany-ok" className="underline hover:text-primary-dark">{es ? 'Atención urgente en Bethany, OK' : 'Urgent care in Bethany, OK'}</Link>
+            <Link to="/x-ray-bethany-ok" className="underline hover:text-primary-dark">{es ? 'Radiografías en el sitio' : 'On-site X-rays in Bethany'}</Link>
+            <Link to="/dot-physical-bethany-ok" className="underline hover:text-primary-dark">{es ? 'Exámenes físicos DOT' : 'DOT physical exams'}</Link>
             <Link to="/services" className="underline hover:text-primary-dark">{es ? 'Servicios de la clínica' : 'Clinic services'}</Link>
             <Link to="/pricing" className="underline hover:text-primary-dark">{es ? 'Precios de pago por cuenta propia' : 'Self-pay pricing'}</Link>
             <Link to="/insurance" className="underline hover:text-primary-dark">{es ? 'Información de seguros' : 'Insurance information'}</Link>
