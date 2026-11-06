@@ -16,6 +16,7 @@ export const ServicesPage: React.FC = () => {
         <Link to="/urgent-care-bethany-ok" className="inline-flex rounded-full bg-primary text-white px-6 py-3 font-semibold hover:bg-dark">{language === 'es' ? 'Atención urgente en Bethany' : 'Urgent care in Bethany'}</Link>
         <Link to="/x-ray-bethany-ok" className="inline-flex rounded-full bg-neutral-100 text-dark px-6 py-3 font-semibold hover:bg-neutral-200">{language === 'es' ? 'Radiografías en Bethany' : 'On-site X-rays in Bethany'}</Link>
         <Link to="/dot-physical-bethany-ok" className="inline-flex rounded-full bg-neutral-100 text-dark px-6 py-3 font-semibold hover:bg-neutral-200">{language === 'es' ? 'Exámenes físicos DOT' : 'DOT physical exams'}</Link>
+        <Link to="/lab-testing-bethany-ok" className="inline-flex rounded-full bg-neutral-100 text-dark px-6 py-3 font-semibold hover:bg-neutral-200">{language === 'es' ? 'Pruebas de laboratorio' : 'Lab testing in Bethany'}</Link>
       </div>
       <BentoGrid />
     </div>

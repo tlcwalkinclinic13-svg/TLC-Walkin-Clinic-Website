@@ -19,6 +19,7 @@ import { SMSPrivacyPage } from './pages/SMSPrivacyPage';
 import { UrgentCarePage } from './pages/UrgentCarePage';
 import { XRayPage } from './pages/XRayPage';
 import { DOTPhysicalPage } from './pages/DOTPhysicalPage';
+import { LabTestingPage } from './pages/LabTestingPage';
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -95,6 +96,7 @@ export const AppContent: React.FC = () => (
               <Route path="/urgent-care-bethany-ok" element={<UrgentCarePage />} />
               <Route path="/x-ray-bethany-ok" element={<XRayPage />} />
               <Route path="/dot-physical-bethany-ok" element={<DOTPhysicalPage />} />
+              <Route path="/lab-testing-bethany-ok" element={<LabTestingPage />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/insurance" element={<InsurancePage />} />
               <Route path="/telemedicine" element={<TelemedicinePage />} />

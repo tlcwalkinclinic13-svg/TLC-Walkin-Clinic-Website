@@ -15,6 +15,10 @@ export const routeMetadata: Record<string, { title: string; description: string;
     title: 'DOT Physical Exams in Bethany, OK | TLC Walk-in Clinic',
     description: 'Schedule a $100 DOT physical in Bethany, OK with an FMCSA-certified medical examiner available during clinic hours. Call (405) 470-3232.',
   },
+  '/lab-testing-bethany-ok': {
+    title: 'Lab Testing in Bethany, OK | TLC Walk-in Clinic',
+    description: 'Visit TLC Walk-in Clinic for in-house lab testing and blood draws sent to DLO in Bethany, OK. Provider visit required. Call (405) 470-3232.',
+  },
   '/services': {
     title: 'Urgent Care Services in Bethany, OK | TLC Walk-in Clinic',
     description: 'Explore walk-in care, X-rays, testing, minor procedures, physicals, and other services available at TLC Walk-in Clinic in Bethany, Oklahoma.',

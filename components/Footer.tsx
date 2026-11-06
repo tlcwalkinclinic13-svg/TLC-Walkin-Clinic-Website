@@ -94,6 +94,7 @@ export const Footer: React.FC = () => {
             <div className="flex flex-col gap-3"><Link to="/urgent-care-bethany-ok" className="text-neutral-600 hover:text-primary font-medium pl-2">{language === 'es' ? 'Atención urgente en Bethany' : 'Urgent Care in Bethany'}</Link>
               <Link to="/x-ray-bethany-ok" className="text-neutral-600 hover:text-primary font-medium pl-2">{language === 'es' ? 'Radiografías en Bethany' : 'On-site X-rays in Bethany'}</Link>
               <Link to="/dot-physical-bethany-ok" className="text-neutral-600 hover:text-primary font-medium pl-2">{language === 'es' ? 'Exámenes físicos DOT' : 'DOT Physical Exams'}</Link>
+              <Link to="/lab-testing-bethany-ok" className="text-neutral-600 hover:text-primary font-medium pl-2">{language === 'es' ? 'Pruebas de laboratorio' : 'Lab Testing in Bethany'}</Link>
               <Link
                 to="/insurance"
                 className="inline-flex items-center gap-2 text-neutral-600 hover:text-primary transition-colors font-medium border-l-2 border-transparent hover:border-primary pl-2"

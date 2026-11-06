@@ -8,6 +8,7 @@
     { "source": "/urgent-care-bethany-ok", "destination": "/urgent-care-bethany-ok.html" },
     { "source": "/x-ray-bethany-ok", "destination": "/x-ray-bethany-ok.html" },
     { "source": "/dot-physical-bethany-ok", "destination": "/dot-physical-bethany-ok.html" },
+    { "source": "/lab-testing-bethany-ok", "destination": "/lab-testing-bethany-ok.html" },
     { "source": "/services", "destination": "/services.html" },
     { "source": "/insurance", "destination": "/insurance.html" },
     { "source": "/telemedicine", "destination": "/telemedicine.html" },
