@@ -63,6 +63,8 @@ export const BentoGrid: React.FC = () => {
       description: t('svc.blood.desc'),
       bullets: [t('svc.blood.1'), t('svc.blood.2')],
       icon: TestTube,
+      pageLink: '/lab-testing-bethany-ok',
+      pageLabel: t('svc.blood.title'),
     },
     {
       title: t('svc.sports.title'),
